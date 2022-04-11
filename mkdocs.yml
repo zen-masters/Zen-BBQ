@@ -1,0 +1,10 @@
+site_name: Zen BBQ 1.0 for Blender
+site_description: Zen BBQ 1.0 for Blender Documentation
+nav:
+    - Introduction: index.md
+docs_dir: mkdocs
+site_dir: docs
+theme: readthedocs
+markdown_extensions:
+    - smarty
+    - admonition
