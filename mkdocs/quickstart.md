@@ -19,15 +19,6 @@ It is great to make quick renders for sketches or bake basic normal maps for gam
 -->
 
 **Zen BBQ** is intended to create, tune and visually control bevel effect without actually changing geometry.
-## Main features:
-- Assigning the desired bevel radius to the whole meshes or to their parts.
-- Working with multiple objects in Edit Mode at once.
-- Highly-adjustable list of presets. You can use the buit-in, edit them or create your own. Both Metric and Imperial unit systems are supported.
-- Edge highlight system that allows you to see which settings are assigned to different parts of the mesh withour having to render it.
-- Quick render preview tools that allow you to preview your result in two clicks and revert it back
-- Quick and non-destructive adding and removing the bevel node to the existing materials
-- Pie Menu with the most frequently used operators
-
 
 ## Assigning Bevel to the Selection
 
