@@ -2,6 +2,13 @@ site_name: Zen BBQ 1.0 for Blender
 site_description: Zen BBQ 1.0 for Blender Documentation
 nav:
     - Introduction: index.md
+    - Installation: installation.md
+    - Quick Start: quickstart.md
+    - N-Panel: npanel.md
+    - Pie Menu: piemenu.md
+    - Downloads: downloads.md
+    - Troubleshooting: troubleshooting.md
+    - Changelog: changelog.md
 docs_dir: mkdocs
 site_dir: docs
 theme: readthedocs
