@@ -18,7 +18,7 @@ It is great to make quick renders for sketches or bake basic normal maps for gam
 **Zen BBQ — Build Bevel Quickly!**
 -->
 
-**Zen BBQ** is intended to create, tune and visually control bevel effect without actually changing geometry.
+**Zen BBQ** is intended for creating, adjusting and visualizing Bevels without actually changing geometry.
 
 ## Assigning Bevel to the Selection
 
@@ -28,7 +28,7 @@ It is great to make quick renders for sketches or bake basic normal maps for gam
 - In View3D view, open the Tools panel at the right part of the area (Default hotkey: "N")
 - Open the Zen BBQ panel tab
 - Click the "●" button right to the desired bevel radius
-- Bevel will be assigned. If you are in Edit Mode, edge highlight will also be activated.
+- Bevel will be assigned. If you are in Edit Mode, Highlight Bevels function will also be activated.
 
 ![Assign Bevel with N-Panel](img/bbq-screens/quickstart/assign-bevel-panel.gif)
 
@@ -37,7 +37,7 @@ It is great to make quick renders for sketches or bake basic normal maps for gam
 - Make sure that you have something selected in Object Mode or Edit Mesh Mode
 - In View3D view, call the Pie Menu by hitting the hotkey (Default: "SHIFT+CTRL+X")
 - Choose one of the desired bevel values.
-- Bevel will be assigned. If you are in Edit Mode, edge highlight will also be activated.
+- Bevel will be assigned. If you are in Edit Mode, Highlight Bevels function will also be activated.
 
 ![Assign Bevel with Pie Menu](img/bbq-screens/quickstart/assign-bevel-piemenu.gif)
 
@@ -56,7 +56,7 @@ It is great to make quick renders for sketches or bake basic normal maps for gam
 
 ## Managing Presets
 
-- You can choose one of the buit-in preset groups in the dropdown menu. Each preset group contains six presets, they are correspondingly shown in the Pie Menu. Edge highlighting also uses colors corresponding to the currently selected preset group. 
+- You can choose one of the buit-in preset groups in the dropdown menu. Each preset group contains six presets, they are correspondingly shown in the Pie Menu. Highlight Bevels function also uses colors corresponding to the currently selected preset group. 
 - By default there are groups for centimeters, millimeters, meters and inches. You can edit the default presets by clicking on them in the list and choosing the desired value or unit.
 - You can create your own preset groups by clicking "+" button. It will ask the name of the new group and the desired units, but you can change units later. It is not required to have the same units in list, you can mix it, for example, having millimeters and centimeters in one list.
 - You can delete bevel preset group by clicking "-" button.

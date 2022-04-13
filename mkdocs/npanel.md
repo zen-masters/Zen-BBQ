@@ -4,7 +4,7 @@
 
 ### Preset Group Selection
 
-Please see [**Quick Start Guide**](quickstart.md#managing-presets) for instruction.
+Please see [**Quick Start Guide**](quickstart.md#managing-presets) for instructions.
 
 ![Main Panel Preset Group Selection](img/bbq-screens/npanel/main-preset-group-selection.png)
 
@@ -21,9 +21,9 @@ Appears only if you open a scene that contains a bevel preset group that you don
 
 ![Main Panel Tools Block](img/bbq-screens/npanel/main-tools-block.png)
 
-#### 1. Toggle Colored Edge Display On/Off
+#### 1. Toggle Highlight Bevels On/Off
 
-Available only in Mesh Edit Mode. Toggles Colored Edge Highlighting.
+Available only in Mesh Edit Mode. Toggles Highlight Bevels function on/off.
 
 #### 2. Smart Select
 
@@ -44,13 +44,15 @@ In Mesh Edit Mode it sets zero bevel radius to the selection or, if no geometry 
 
 ### Presets List
 
-Please see [**Quick Start Guide**](quickstart.md#managing-presets) for instruction.
+Please see [**Quick Start Guide**](quickstart.md#managing-presets) for instructions.
 
 ![Main Panel Presets List](img/bbq-screens/npanel/main-presets-list.png)
 
 #### 1. Color Marker
 
-Color that will be used to show this bevel radius when the edge colored display is on. Triangle direction corresponds the position of this option in the Pie Menu.
+Color that will be used to show this bevel radius when the Highlight Bevels function is on. These 6 presets will be also included into the Pie Menu, clockwise. Triangle direction on the icon corresponds the position of this option in the Pie Menu.
+
+![Pie Menu Corresponcence](img/bbq-screens/npanel/preset-list-piemenu-correspondence.png)
 
 #### 2. Radius value and measurement unit
 

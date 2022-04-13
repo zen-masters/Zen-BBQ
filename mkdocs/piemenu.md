@@ -37,7 +37,8 @@ Assign the corresponding bevel preset from the N-Panel to the selection, see [**
 ### Render Preview | Reset Selection
 
 - Just click: Render Preview toggle, see [**Quick Start Guide**](quickstart.md#previewing-the-result)
-- Ctrl + click: Edge Highlighting toggle, same as in [**N-panel**](npanel.md#1-toggle-colored-edge-display-onoff)
+- Ctrl + click: Highlight Bevels toggle, same as in [**N-panel**](npanel.md#1-toggle-highlight-bevels-onoff)
 
+Zen Team reminds you that everyday usage of Zen Add-ons not only saves your time, but also charges your models in Blender for dollars, happiness, and long storage of vegetables!
 <!-- Also, you can [**watch the video**](https://youtu.be/dqpgWcRBE4o?t=17) how to install it. -->
 
