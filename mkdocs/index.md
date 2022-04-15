@@ -40,6 +40,8 @@ Zen BBQ is an add-on for creating, adjusting and visualizing Bevels in a couple 
 ![Adjustable Bevel Radius](img/promo-images/Carburetor_Controllable_Radii.jpg)
 <br /><br />
 ![Colorized Edge Display](img/promo-images/Carburetor_Colorized_Display.jpg)
+<br /><br />
+![Example](img/promo-images/vertex-example.gif)
 <br />
 <br />
 **Enjoy this experience with us!**
