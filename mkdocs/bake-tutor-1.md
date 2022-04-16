@@ -1,4 +1,4 @@
-# Quick Guide How to Bake Mormal Map
+# Quick Guide How to Bake Normal Map
 
 ## Prepare UVs
 
