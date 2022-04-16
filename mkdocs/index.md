@@ -4,6 +4,7 @@
 
 - [**Installation**](installation.md)
 - [**Quick Start Guide**](quickstart.md)
+- [**Quick Guide How to Bake Normal Map**](bake-tutor-1.md)
 
 ![Intro Zen BBQ](img/IntroBBQ.png)
 <!-- blank line -->

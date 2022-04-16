@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Quick Guide How to Bake Normal Map - Zen BBQ 1.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Quick Guide How to Bake Normal Map";
+        var mkdocs_page_input_path = "bake-tutor-1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen BBQ 1.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../npanel/">N-Panel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Quick Guide How to Bake Normal Map</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prepare-uvs">Prepare UVs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-image-node-to-the-objects-material">Add image node to the object's material</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#baking-settings">Baking Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake">Bake</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewing-the-result">Viewing the result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exporting-normal-map">Exporting Normal Map</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen BBQ 1.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Quick Guide How to Bake Normal Map</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="quick-guide-how-to-bake-mormal-map">Quick Guide How to Bake Mormal Map</h1>
+<h2 id="prepare-uvs">Prepare UVs</h2>
+<p>First, make sure that you have UVs good for baking normal maps. This tutor is not about making UVs (it would require a separate book), so we assume that the reader is already familiar with this theme. In short:<br />
+UV shells should have enough margins.<br />
+Hard edges should be separated on UV.<br /></p>
+<p><img alt="Example of UVs for baking" src="../img/bake-tutor-1/uvs-prepared.png" /></p>
+<p><em>Example of mesh with UVs ready for baking.</em></p>
+<h2 id="add-image-node-to-the-objects-material">Add image node to the object&rsquo;s material</h2>
+<p>Make sure that you have your mesh selected.<br /></p>
+<p><img alt="Add Image Shader Node" src="../img/bake-tutor-1/shader-add-image-node.png" /></p>
+<p>In Shader Editor, choose <strong>Add &mdash; Texture &mdash; Image Texture</strong><br /></p>
+<p><img alt="Add Image Shader Node" src="../img/bake-tutor-1/image-new.png" /></p>
+<p>In that node, click <strong>New</strong></p>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-settings.png" /></p>
+<p>In this window, choose the <strong>Name</strong> of your map, <strong>Width</strong> and <strong>Height</strong>.<br />
+<strong>Alpha</strong> is not needed for Normal Map, so we can turn it off.<br />
+After that, click OK</p>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-non-color.png" /></p>
+<p>It&rsquo;s very important to set <strong>Color Space</strong> to <strong>Non-Color</strong>. Now we&rsquo;re done with the image.</p>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-final-shader.png" /></p>
+<p>Final shader looks like this. You don&rsquo;t need to connect the image node anywhere right now.<br />
+We recommend to bake with the Preview Node on. If it&rsquo;s not present in your material, you can add it by using <a href="../npanel/#2-preview-material-override-toggle"><strong>Preview Mat Override</strong></a> button in Zen BBQ N-Panel.</p>
+<h2 id="baking-settings">Baking Settings</h2>
+<p>Make sure you have your object selected.<br /></p>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/npanel-high.png" /></p>
+<p>Make sure you have Quality setting in the N-Panel set to High.
+<img alt="New Image Settings" src="../img/bake-tutor-1/bake-settings.png" /></p>
+<p>In <strong>Render Properties</strong> Tab:<br />
+In <strong>Bake Accordion</strong> change:</p>
+<ul>
+<li><strong>Bake Type</strong>: Normal</li>
+<li><strong>Selected to Active</strong>: Off</li>
+</ul>
+<p>In <strong>Render Accordion</strong> I prefer to choose <strong>Time Limit</strong>, for example, 15 minutes. The more time you set, the better quality you will get. 5-15 minutes are OK to render a draft variant. Of course, it depends on your computer&rsquo;s power, image resolution, mesh complexity, et cetera.</p>
+<h2 id="bake">Bake</h2>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/bake-start.png" /></p>
+<p>When you&rsquo;re set, click <strong>Bake</strong> and wait till it&rsquo;s done.</p>
+<h2 id="viewing-the-result">Viewing the result</h2>
+<p>In <strong>Shader Editor</strong>:</p>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/remove-preview-node.png" /></p>
+<ul>
+<li>Remove the Preview Node (Manually or by using <a href="../npanel/#2-preview-material-override-toggle"><strong>Preview Mat Override</strong></a> button in Zen BBQ N-Panel.</li>
+</ul>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/add-normal-map-node.png" /></p>
+<ul>
+<li>Add a Normal Map node</li>
+</ul>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/connect-nodes.png" /></p>
+<ul>
+<li>Connect output of it to Normal input of your surface, and your Image Node Color output to the Color input of the Normal Map node.</li>
+</ul>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/surface-settings.png" /></p>
+<ul>
+<li>We&rsquo;re mostly done. Now adjust your material if you want to. I set somewhat grey-ish <strong>Base Color</strong> and <strong>Metallic</strong> to 1 for better viewing the result.</li>
+</ul>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/cycles-to-eevee.png" />
+<img alt="New Image Settings" src="../img/bake-tutor-1/eevee.png" /></p>
+<ul>
+<li>Now we can choose Eevee render to see the result</li>
+</ul>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Longer baking time and higher normal map resolution will give less artifacts.</p>
+</div>
+<h2 id="exporting-normal-map">Exporting Normal Map</h2>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-editor-choose.png" /></p>
+<p>In <strong>Image Editor</strong>, open your baked Normal Map.</p>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-editor-save-as.png" /></p>
+<p>And now you can choose <strong>Image</strong> &mdash; <strong>Save As&hellip;</strong> it for usage outside Blender.</p>
+<p><img alt="New Image Settings" src="../img/bake-tutor-1/MyBakedNormal.png" /></p>
+<p><em>The result baked Normal Map</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../downloads/" class="btn btn-neutral float-left" title="Downloads"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../troubleshooting/" class="btn btn-neutral float-right" title="Troubleshooting">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../downloads/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../troubleshooting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
