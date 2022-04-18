@@ -113,7 +113,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="quick-guide-how-to-bake-mormal-map">Quick Guide How to Bake Mormal Map</h1>
+                <h1 id="quick-guide-how-to-bake-normal-map">Quick Guide How to Bake Normal Map</h1>
 <h2 id="prepare-uvs">Prepare UVs</h2>
 <p>First, make sure that you have UVs good for baking normal maps. This tutor is not about making UVs (it would require a separate book), so we assume that the reader is already familiar with this theme. In short:<br />
 UV shells should have enough margins.<br />
@@ -124,52 +124,53 @@ Hard edges should be separated on UV.<br /></p>
 <p>Make sure that you have your mesh selected.<br /></p>
 <p><img alt="Add Image Shader Node" src="../img/bake-tutor-1/shader-add-image-node.png" /></p>
 <p>In Shader Editor, choose <strong>Add &mdash; Texture &mdash; Image Texture</strong><br /></p>
-<p><img alt="Add Image Shader Node" src="../img/bake-tutor-1/image-new.png" /></p>
+<p><img alt="New Image" src="../img/bake-tutor-1/image-new.png" /></p>
 <p>In that node, click <strong>New</strong></p>
 <p><img alt="New Image Settings" src="../img/bake-tutor-1/image-settings.png" /></p>
 <p>In this window, choose the <strong>Name</strong> of your map, <strong>Width</strong> and <strong>Height</strong>.<br />
 <strong>Alpha</strong> is not needed for Normal Map, so we can turn it off.<br />
 After that, click OK</p>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-non-color.png" /></p>
+<p><img alt="Color Space" src="../img/bake-tutor-1/image-non-color.png" /></p>
 <p>It&rsquo;s very important to set <strong>Color Space</strong> to <strong>Non-Color</strong>. Now we&rsquo;re done with the image.</p>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-final-shader.png" /></p>
+<p><img alt="Final Shader" src="../img/bake-tutor-1/image-final-shader.png" /></p>
 <p>Final shader looks like this. You don&rsquo;t need to connect the image node anywhere right now.<br />
 We recommend to bake with the Preview Node on. If it&rsquo;s not present in your material, you can add it by using <a href="../npanel/#2-preview-material-override-toggle"><strong>Preview Mat Override</strong></a> button in Zen BBQ N-Panel.</p>
 <h2 id="baking-settings">Baking Settings</h2>
 <p>Make sure you have your object selected.<br /></p>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/npanel-high.png" /></p>
+<p><img alt="Quality Settings High" src="../img/bake-tutor-1/npanel-high.png" /></p>
 <p>Make sure you have Quality setting in the N-Panel set to High.
-<img alt="New Image Settings" src="../img/bake-tutor-1/bake-settings.png" /></p>
+<img alt="Bake Settings" src="../img/bake-tutor-1/bake-settings.png" /></p>
 <p>In <strong>Render Properties</strong> Tab:<br />
 In <strong>Bake Accordion</strong> change:</p>
 <ul>
 <li><strong>Bake Type</strong>: Normal</li>
 <li><strong>Selected to Active</strong>: Off</li>
+<li><strong>Margin Type</strong>: Extend</li>
 </ul>
 <p>In <strong>Render Accordion</strong> I prefer to choose <strong>Time Limit</strong>, for example, 15 minutes. The more time you set, the better quality you will get. 5-15 minutes are OK to render a draft variant. Of course, it depends on your computer&rsquo;s power, image resolution, mesh complexity, et cetera.</p>
 <h2 id="bake">Bake</h2>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/bake-start.png" /></p>
+<p><img alt="Start Baking" src="../img/bake-tutor-1/bake-start.png" /></p>
 <p>When you&rsquo;re set, click <strong>Bake</strong> and wait till it&rsquo;s done.</p>
 <h2 id="viewing-the-result">Viewing the result</h2>
 <p>In <strong>Shader Editor</strong>:</p>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/remove-preview-node.png" /></p>
+<p><img alt="Remove Preview Node" src="../img/bake-tutor-1/remove-preview-node.png" /></p>
 <ul>
 <li>Remove the Preview Node (Manually or by using <a href="../npanel/#2-preview-material-override-toggle"><strong>Preview Mat Override</strong></a> button in Zen BBQ N-Panel.</li>
 </ul>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/add-normal-map-node.png" /></p>
+<p><img alt="Add a Normal Map Node" src="../img/bake-tutor-1/add-normal-map-node.png" /></p>
 <ul>
 <li>Add a Normal Map node</li>
 </ul>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/connect-nodes.png" /></p>
+<p><img alt="Connect Nodes" src="../img/bake-tutor-1/connect-nodes.png" /></p>
 <ul>
 <li>Connect output of it to Normal input of your surface, and your Image Node Color output to the Color input of the Normal Map node.</li>
 </ul>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/surface-settings.png" /></p>
+<p><img alt="Surface Settings" src="../img/bake-tutor-1/surface-settings.png" /></p>
 <ul>
 <li>We&rsquo;re mostly done. Now adjust your material if you want to. I set somewhat grey-ish <strong>Base Color</strong> and <strong>Metallic</strong> to 1 for better viewing the result.</li>
 </ul>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/cycles-to-eevee.png" />
-<img alt="New Image Settings" src="../img/bake-tutor-1/eevee.png" /></p>
+<p><img alt="Cycles to Eevee" src="../img/bake-tutor-1/cycles-to-eevee.png" />
+<img alt="Eevee result" src="../img/bake-tutor-1/eevee.png" /></p>
 <ul>
 <li>Now we can choose Eevee render to see the result</li>
 </ul>
@@ -178,11 +179,11 @@ In <strong>Bake Accordion</strong> change:</p>
 <p>Longer baking time and higher normal map resolution will give less artifacts.</p>
 </div>
 <h2 id="exporting-normal-map">Exporting Normal Map</h2>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-editor-choose.png" /></p>
+<p><img alt="Image Editor" src="../img/bake-tutor-1/image-editor-choose.png" /></p>
 <p>In <strong>Image Editor</strong>, open your baked Normal Map.</p>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/image-editor-save-as.png" /></p>
+<p><img alt="Save As" src="../img/bake-tutor-1/image-editor-save-as.png" /></p>
 <p>And now you can choose <strong>Image</strong> &mdash; <strong>Save As&hellip;</strong> it for usage outside Blender.</p>
-<p><img alt="New Image Settings" src="../img/bake-tutor-1/MyBakedNormal.png" /></p>
+<p><img alt="Result" src="../img/bake-tutor-1/MyBakedNormal.png" /></p>
 <p><em>The result baked Normal Map</em></p>
               
             </div>
