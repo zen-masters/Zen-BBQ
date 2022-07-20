@@ -1,5 +1,7 @@
 # Zen BBQ 1.0 for Blender
 
+![I stand with Ukraine](img/I_stand_with_Ukraine_banner.svg)
+
 ## Quick Start
 
 - [**Installation**](installation.md)
