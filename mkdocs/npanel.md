@@ -81,9 +81,9 @@ If you will be baking normal maps, please make sure that you're using the High o
 ### Live Boolean
 
 ![Live Boolean](img/bbq-screens/npanel/ZenBBQ_LiveBooleanGIF.gif)
+_You can find the example from the animated image above in scene "Carburetor" in Help/Examples panel_
 
-ZenBBQ has Live Boolean support. To adjust the bevel radius for at the intersection zone, select the object needed and use the _Live Boolean (default) bevel radius_ at the _Advanced_ subpanel (as seen on animated image above).
-
+ZenBBQ has Live Boolean support. To adjust the bevel radius for at the intersection surfaces, select the desired object and use the __Live Boolean (default) bevel radius__ at the __Advanced__ subpanel (as shown in the animated image above).
 
 
 ## Preferences
