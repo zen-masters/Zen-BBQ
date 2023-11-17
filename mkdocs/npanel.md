@@ -78,6 +78,14 @@ Three options for preview render quality (Low, Medium and High). The first butto
 
 If you will be baking normal maps, please make sure that you're using the High option for best results.
 
+### Live Boolean
+
+![Live Boolean](img/bbq-screens/npanel/ZenBBQ_LiveBooleanGIF.gif)
+
+ZenBBQ has Live Boolean support. To adjust the bevel radius for at the intersection zone, select the object needed and use the _Live Boolean (default) bevel radius_ at the _Advanced_ subpanel (as seen on animated image above).
+
+
+
 ## Preferences
 
 ![Preferences](img/bbq-screens/npanel/preferences.png)
