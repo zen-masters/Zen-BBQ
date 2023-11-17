@@ -133,6 +133,19 @@ Zen BBQ requires Cycles render engine to show you result, so it automatically sw
 
 [Discord channel](https://discord.gg/wGpFeME) for user feedback, bug reports, and quick help with Zen BBQ.
 ### Version
-Shows the current version of Zen BBQ
+Shows the current version of Zen BBQ.
 
 
+### Examples
+Here you can download and open the built-in examples of ZenBBQ usage.
+![Examples Panel](img/bbq-screens/npanel/examples.png)
+
+__Update__ — Updates the list of demo examples.
+
+__Download Example__ — Downloads the selected example.
+
+__Open__ — Opens the selected example.
+
+__Delete Example__ — Removes the selected example from your computer (you will be able to download it again if needed).
+
+__More Info__ — Opens the web-page with additional information.
