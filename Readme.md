@@ -35,6 +35,7 @@ Zen BBQ is an add-on for creating, adjusting and visualizing Bevels in a couple 
 ![Adjustable Bevel Radius](mkdocs/img/promo-images/Carburetor_Controllable_Radii.jpg)
 <br />
 ![Colorized Edge Display](mkdocs/img/promo-images/Carburetor_Colorized_Display.jpg)
+<br />
 **Enjoy this experience with us!**
 
 ![Gumroad](mkdocs/img/icons/services/gumroad-16.png) [**Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | ![BlenderMarket](mkdocs/img/icons/services/blendermarket-16.png) [**BlenderMarket**](https://www.blendermarket.com/products/zen-bbq) | ![Discord](mkdocs/img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
