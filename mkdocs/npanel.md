@@ -73,7 +73,7 @@ Toggles Render Preview mode.
 Toggles overriding material of the selected objects with bevel shader for slear bevel view.
 #### 3. Automatically Preview Material Override Toggle
 The previous function is toggled synchronously with the Render Preview Toggle.
-#### 4. preview Render Quality
+#### 4. Preview Render Quality
 Three options for preview render quality (Low, Medium and High). The first button (Revert/Custom) allows to restore the user's settings that were before one of built-in quality options was activated.
 
 If you will be baking normal maps, please make sure that you're using the High option for best results.
@@ -85,6 +85,103 @@ _You can find the example from the animated image above in scene "Carburetor" in
 
 ZenBBQ has Live Boolean support. To adjust the bevel radius for at the intersection surfaces, select the desired object and use the __Live Boolean (default) bevel radius__ at the __Advanced__ subpanel (as shown in the animated image above).
 
+---
+
+### Tools
+
+![Tools Panel](img/bbq-screens/npanel/tools_panel.png)
+
+This panel offers utility tools.
+
+#### **Create VC Mask** 
+Create vertex color attributes using bevel values.
+
+![Bevel to VC example](img/bbq-screens/npanel/bevel_to_vc_example.png)
+
+!!! Tip
+    **Note:** Since this is an operator that generates vertex color, it does not take object modifiers into account.  
+    This also means it cannot process Live Booleans.  
+    To bake such data into vertex color, you need to apply the modifier stack. The changes must be made permanent.
+    If you need to keep the modifier stack and still export the model with up-to-date vertex color to another application,
+    consider using an [alternative method](#node-vc-mask) of generating vertex color.
+
+
+<br />
+![Alt text](img/bbq-screens/npanel/bevel_to_vc_op_prop.png)
+
+- **Use Active VC Layer** - Use active vertex color layer instead of creating a new one.
+
+!!! Tip
+    The operator creates a new color layer named **G_ZenBBQ_VC_Mask**, where the first letter **G** indicates that this is a generated layer.  
+    The new layer always has the following properties: **Domain - Face Corner**, **Data Type - Color**.  
+    However, if you need a different type of layer or want to add the generated mask to an existing one, simply make the desired layer active and enable the **Use Active VC Layer** option.
+
+
+- **Color Channel** - Choose which color channel to use.
+    - *Red* - Red channel
+    - *Green* - Green channel
+    - *Blue* - Blue channel
+    - *Alpha* - Alpha channel
+    - *Red, Green, Blue* - Red, Green, Blue channels
+    - *Red, Green, Blue, Alpha* - Red, Green, Blue Alpha channels
+
+!!! Tip
+    You can choose any channel for the generated data, or multiple channels according to the documentation of the application that will use this data.  
+    If you're unsure, or if you're not using vertex color to transmit other types of data, select the last option with all channels enabled, including Alpha.  
+    This will help prevent additional errors, though it may slightly increase the data size of the model.
+
+- **Add to Existing** - Add generated color to the existing vertex color instead of replacing it.
+
+!!! Tip
+    If you're using vertex color to transmit other types of data, enable the **Add to Existing** option.  
+    This allows you to overwrite only the channel specified in the **Color Channel** setting of this operator, without affecting the other channels.
+    **Note:** The specified channel will be completely overwritten. Data inside the channel is not merged.
+
+---
+
+#### **Show Max Bevel by Material**
+
+Show the maximum bevel value for the active or all materials.
+This operator displays the minimum and maximum bevel values of the object, including a breakdown by materials.
+
+![Alt text](img/bbq-screens/npanel/show_max_bevel_invoke.png)
+
+- **Use All Materials** - Search for bevel values among all materials in the object. If this option is disabled, you will receive data only for the active material.
+- **Units** - Measurement units. Select the units in which you need to get the data.
+
+![Alt text](img/bbq-screens/npanel/show_max_bevel_by_mat_popup.png)
+
+The data is displayed in a popup window.  
+Here you can see the unit of measurement (**CENTIMETERS**), the material name (**Aluminium**), and the minimum and maximum bevel values for that material.
+
+---
+
+#### **Node VC Mask**
+
+Create geometry node modifier and assign it to selected objects.
+
+This operator creates a **Geometry Nodes** modifier named `ZenBBQ_BevelsToVertexColor` for the selected object and generates a vertex color mask based on the bevel settings.  
+
+This process is dynamic, and the resulting vertex color will update as you modify the geometry or adjust bevel settings using the add-on.  
+The modifier also dynamically accounts for [Live Boolean](#live-boolean) operations and the [Live Boolean (default) bevel radius](#live-boolean) setting defined in the add-on preferences.
+
+If you have created more than one Boolean, make sure that this modifier is placed at the end of the modifier stack to reflect the current state of the geometry correctly, following best practices for modifier stack order.
+
+![Bevel to VC Modifier](img/bbq-screens/npanel/bevel_to_vc_modifier.png)
+
+In the modifier settings, you can specify which channel(s) the mask should be generated in. You can select more than one channel.  
+Processing the Alpha channel is currently not possible using Geometry Nodes. Therefore, if you need to use the Alpha channel, please use the [Create VC Mask](#create-vc-mask) operator.
+
+The **Default Radius** field in the modifier is informational only. You cannot change its value directly.  
+It is controlled via the [Live Boolean (default) bevel radius](#live-boolean) setting and serves only as a convenient visual reference in the modifier.
+
+The operator creates a vertex color layer named `N_ZenBBQ_VC_Mask`, where the letter **N** indicates that the data in this layer is generated using nodes.  
+
+After the operator creates the modifier, you can use it by simply adding the modifier manually or together with your own node setups.  
+However, in that case, you need to create the layer named `N_ZenBBQ_VC_Mask` manually.
+
+
+---
 
 ## Preferences
 
@@ -122,6 +219,8 @@ When you assign bevel in polygon editing mode, you can assign it to the boundary
 ![Preferences Confirm Cycles](img/bbq-screens/npanel/preferences-confirm-cycles.png)
 
 Zen BBQ requires Cycles render engine to show you result, so it automatically switches it when it's needed. For example if you click "Render Preview" in a new scene. With this option disabled, Zen BBQ shall not ask for confirmation once it needs to switch render engine to Cycles.
+
+---
 
 ## Help
 

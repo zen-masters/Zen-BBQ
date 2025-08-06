@@ -7,7 +7,8 @@ nav:
     - N-Panel: npanel.md
     - Pie Menu: piemenu.md
     - Downloads: downloads.md
-    - Quick Guide How to Bake Normal Map: bake-tutor-1.md
+    - How to Bake Normal Map: bake-tutor-1.md
+    - How to use vertex color mask: guide_using_vc_mask.md
     - Troubleshooting: troubleshooting.md
     - Changelog: changelog.md
 docs_dir: mkdocs
