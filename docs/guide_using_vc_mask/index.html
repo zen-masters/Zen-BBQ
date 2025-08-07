@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>How to use vertex color mask - Zen BBQ 1.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How to use vertex color mask";
+        var mkdocs_page_input_path = "guide_using_vc_mask.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen BBQ 1.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../npanel/">N-Panel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../bake-tutor-1/">How to Bake Normal Map</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">How to use vertex color mask</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#blender">Blender</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#marmoset-toolbag">Marmoset Toolbag</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen BBQ 1.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">How to use vertex color mask</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="quick-guide-how-to-use-vertex-color-mask">Quick Guide: How to Use Vertex Color Mask</h1>
+<p>This tutorial does not aim to teach you how to create bevels using the addon. If you&rsquo;re unfamiliar with that process, please refer to the <a href="../quickstart/">Quick Start</a> section.</p>
+<p>This guide explains how to transfer bevel data from Blender to Marmoset Toolbag 5 using vertex color masking. Bevels are created in Blender with the addon, converted to a vertex color mask, and exported with the mesh. In Toolbag, the mesh is imported, a material is assigned, the bevel shader is enabled with vertex color masking, and the bevel width is set to match the maximum value used in Blender to achieve consistent visual results.</p>
+<h2 id="blender">Blender</h2>
+<p>We&rsquo;ll begin with a scene that contains an object with bevels already created. Our goal is to transfer the bevel settings into Marmoset Toolbag and ensure that the bevels appear the same and have varying widths according to what we set up in Blender.</p>
+<p><img alt="Test Scene" src="../img/bbq-screens/vcmask/test_scene.png" /></p>
+<p>In this test scene, we have an object with bevel samples of 1, 2, 3, and 5 cm. The last sample has no bevel applied.</p>
+<p>Let’s add a modifier that will create a Vertex Color Mask for use in Marmoset Toolbag.</p>
+<ul>
+<li>In the addon panel, expand the <strong>Tools</strong> section and click the <strong>Node VC Mask</strong> button.</li>
+</ul>
+<p><img alt="Node VC Mask" src="../img/bbq-screens/vcmask/button_node_vc_mask.png" /></p>
+<p>A Geometry Nodes modifier will be added to the object, dynamically generating the vertex color and automatically updating it to reflect any changes in geometry or bevels.</p>
+<p><img alt="vc modifier" src="../img/bbq-screens/vcmask/blender_geom_nodes_modifier.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can freely modify the Geometry Nodes of this modifier to suit your needs. However, the next time you assign it to a new object in the same scene, it will use the modified version.<br />
+If you want the addon to generate a fresh, default version of the node setup, simply remove all instances of the modifier from the scene. A new one will be created automatically.</p>
+</div>
+<p>To preview the result, you need to make the generated vertex color layer active and enable viewport settings to show mesh attributes.</p>
+<ul>
+<li>Expand the <strong>Color Attributes</strong> list and select the layer named <code>N_ZenBBQ_VC_Mask</code>.</li>
+</ul>
+<p><img alt="Color Attributes" src="../img/bbq-screens/vcmask/color_attribute_layer.png" /></p>
+<ul>
+<li>Switch the viewport render mode to <strong>Solid</strong>. Then open the render settings and enable both <strong>Attribute</strong> and <strong>Flat</strong> shading. The <strong>Flat</strong> option is optional, but when enabled, it displays the vertex color unaffected by lighting.</li>
+</ul>
+<p><img alt="viewport settings" src="../img/bbq-screens/vcmask/viewport_settings.png" /></p>
+<p>Here&rsquo;s the result of the modifier:</p>
+<p><img alt="vc result" src="../img/bbq-screens/vcmask/vc_result.png" /></p>
+<p>As you can see, the vertex color is red because only the red channel is used in the modifier settings. To understand the logic behind the gradient values, let’s refer to the Marmoset Toolbag documentation on <a href="https://marmoset.co/posts/revolutionize-your-3d-workflow-with-toolbags-bevel-shader/">Vertex Color Masking</a>.</p>
+<blockquote>
+<p>If you need more control, you can select a Vertex Color Mask channel to vary the size of bevels within a single material. Vertex masking uses the color value as a multiplier on the Bevel Width setting. For example, if Bevel Width is set to 5mm, a vertex color value of 0.5 would create a size of 2.5mm for that region. You can think of the Bevel Width setting as the maximum size in this case, with vertex colors being used to reduce the size where necessary.</p>
+</blockquote>
+<p>This means we need to create a mask where the widest bevel is represented by the brightest color (1.0 in color channel value), and the others will be dimmer depending on their width. That’s exactly what we see in the final vertex color: the widest bevel (5 cm) is the brightest, and areas with no bevel are completely black.</p>
+<h2 id="marmoset-toolbag">Marmoset Toolbag</h2>
+<p>Let’s configure the Marmoset Toolbag shader to display bevels.</p>
+<ul>
+<li>Import the test object into Toolbag.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For export/import, it’s best to use a format that supports vertex color. The default FBX settings are a good choice.</p>
+</div>
+<p>Here is the result after importing into Toolbag:</p>
+<p><img alt="in Toolbag" src="../img/bbq-screens/vcmask/toolbag_imported.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can adjust the <strong>Albedo</strong> color to enhance the highlight visibility. In the image above, the Albedo color is R:91 G:85 B:102. Also, in the material&rsquo;s <strong>Reflectivity</strong> settings, <strong>Metalness</strong> is set to 1.0.</p>
+</div>
+<p>Right after importing the object into Toolbag, the bevels are not yet visible. To display them correctly, the material and render settings need to be configured.</p>
+<p>As noted in the documentation, the render mode must be changed to allow bevels to appear:</p>
+<blockquote>
+<p><strong>Note:</strong> The bevel shader is not supported in the Raster renderer. Make sure Hybrid or Ray Tracing is selected to preview the effect. Bevels can be baked to textures to view the result in Raster mode as well.</p>
+</blockquote>
+<p>In the render settings, switch the <strong>Render Mode</strong> to <strong>Ray Tracing</strong>.</p>
+<p><img alt="Render Mode" src="../img/bbq-screens/vcmask/toolbag_render_mode.png" /></p>
+<p>In the object’s material settings, find the <strong>Surface</strong> tab. Open the dropdown labeled <strong>Normals</strong> and select <strong>Bevel</strong>.</p>
+<p><img alt="bevels setup" src="../img/bbq-screens/vcmask/toolbag_shader_setup.png" /></p>
+<p>After changing the normal type, the panel will switch to the one we need for bevel configuration.</p>
+<p><img alt="bevels setup final" src="../img/bbq-screens/vcmask/toolbag_bevels_val.png" /></p>
+<p>We only need to adjust two parameters: <strong>Bevel Width (mm)</strong> and <strong>Vertex Color Mask</strong>.</p>
+<p>According to Toolbag’s documentation, we should set <strong>Bevel Width</strong> to match the widest bevel in our model. Let&rsquo;s go back to Blender.</p>
+<ul>
+<li>In Blender, select the model and use the operator <a href="../npanel/#show-max-bevel-by-material">Show Max Bevel by Material</a> from the <a href="../npanel/#tools">Tools</a> panel.</li>
+</ul>
+<p><img alt="get width" src="../img/bbq-screens/vcmask/blender_get_width.png" /></p>
+<p>In the popup, select the unit of measurement used in Toolbag. You can find this in the Toolbag’s bevel field labeled <strong>Bevel Width (mm)</strong>. Confirm your choice by clicking <strong>Ok</strong>.</p>
+<p><img alt="max value" src="../img/bbq-screens/vcmask/blender_max_value.png" /></p>
+<p>As a result, we see that the maximum bevel width in our object is <strong>50 mm</strong>.</p>
+<p>Enter this value in Toolbag’s <strong>Bevel Width (mm)</strong> field in the material settings.</p>
+<p><img alt="result 01" src="../img/bbq-screens/vcmask/toolbag_result_01.png" /></p>
+<p>As expected, we now have bevels sized at 50 mm.</p>
+<p>Next, let&rsquo;s add the influence of the vertex color map. Change the <strong>Vertex Color Map</strong> setting from <strong>None</strong> to one of the available vertex color channels in the model. In our case, it&rsquo;s the <strong>R</strong> channel.</p>
+<p><img alt="set vc channel" src="../img/bbq-screens/vcmask/toolbag_vertex_color_option.png" /></p>
+<p>The final result shows a clear variation in bevel width according to what was set up using the Zen BBQ addon.</p>
+<p><img alt="result" src="../img/bbq-screens/vcmask/toolbag_final.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../bake-tutor-1/" class="btn btn-neutral float-left" title="How to Bake Normal Map"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../troubleshooting/" class="btn btn-neutral float-right" title="Troubleshooting">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../bake-tutor-1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../troubleshooting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

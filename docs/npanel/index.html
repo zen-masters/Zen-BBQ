@@ -8,7 +8,7 @@
     <title>N-Panel - Zen BBQ 1.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,12 +17,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -34,7 +33,7 @@
           <a href=".." class="icon icon-home"> Zen BBQ 1.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -53,7 +52,7 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">N-Panel</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">N-Panel</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#main-panel">Main Panel</a>
         <ul>
@@ -101,11 +100,21 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#3-automatically-preview-material-override-toggle">3. Automatically Preview Material Override Toggle</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#4-preview-render-quality">4. preview Render Quality</a>
+    <li class="toctree-l4"><a class="reference internal" href="#4-preview-render-quality">4. Preview Render Quality</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#live-boolean">Live Boolean</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#create-vc-mask">Create VC Mask</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#show-max-bevel-by-material">Show Max Bevel by Material</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#node-vc-mask">Node VC Mask</a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -155,7 +164,11 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../bake-tutor-1/">Quick Guide How to Bake Normal Map</a>
+                <li class="toctree-l1"><a class="reference internal" href="../bake-tutor-1/">How to Bake Normal Map</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../guide_using_vc_mask/">How to use vertex color mask</a>
                 </li>
               </ul>
               <ul>
@@ -179,13 +192,13 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>N-Panel</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">N-Panel</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -234,13 +247,93 @@ In Mesh Edit Mode it sets zero bevel radius to the selection or, if no geometry 
 <p>Toggles overriding material of the selected objects with bevel shader for slear bevel view.</p>
 <h4 id="3-automatically-preview-material-override-toggle">3. Automatically Preview Material Override Toggle</h4>
 <p>The previous function is toggled synchronously with the Render Preview Toggle.</p>
-<h4 id="4-preview-render-quality">4. preview Render Quality</h4>
+<h4 id="4-preview-render-quality">4. Preview Render Quality</h4>
 <p>Three options for preview render quality (Low, Medium and High). The first button (Revert/Custom) allows to restore the user&rsquo;s settings that were before one of built-in quality options was activated.</p>
 <p>If you will be baking normal maps, please make sure that you&rsquo;re using the High option for best results.</p>
 <h3 id="live-boolean">Live Boolean</h3>
 <p><img alt="Live Boolean" src="../img/bbq-screens/npanel/ZenBBQ_LiveBooleanGIF.gif" />
 <em>You can find the example from the animated image above in scene &ldquo;Carburetor&rdquo; in Help/Examples panel</em></p>
 <p>ZenBBQ has Live Boolean support. To adjust the bevel radius for at the intersection surfaces, select the desired object and use the <strong>Live Boolean (default) bevel radius</strong> at the <strong>Advanced</strong> subpanel (as shown in the animated image above).</p>
+<hr />
+<h3 id="tools">Tools</h3>
+<p><img alt="Tools Panel" src="../img/bbq-screens/npanel/tools_panel.png" /></p>
+<p>This panel offers utility tools.</p>
+<h4 id="create-vc-mask"><strong>Create VC Mask</strong></h4>
+<p>Create vertex color attributes using bevel values.</p>
+<p><img alt="Bevel to VC example" src="../img/bbq-screens/npanel/bevel_to_vc_example.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Note:</strong> Since this is an operator that generates vertex color, it does not take object modifiers into account.<br />
+This also means it cannot process Live Booleans.<br />
+To bake such data into vertex color, you need to apply the modifier stack. The changes must be made permanent.
+If you need to keep the modifier stack and still export the model with up-to-date vertex color to another application,
+consider using an <a href="#node-vc-mask">alternative method</a> of generating vertex color.</p>
+</div>
+<p><br />
+<img alt="Alt text" src="../img/bbq-screens/npanel/bevel_to_vc_op_prop.png" /></p>
+<ul>
+<li><strong>Use Active VC Layer</strong> - Use active vertex color layer instead of creating a new one.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The operator creates a new color layer named <strong>G_ZenBBQ_VC_Mask</strong>, where the first letter <strong>G</strong> indicates that this is a generated layer.<br />
+The new layer always has the following properties: <strong>Domain - Face Corner</strong>, <strong>Data Type - Color</strong>.<br />
+However, if you need a different type of layer or want to add the generated mask to an existing one, simply make the desired layer active and enable the <strong>Use Active VC Layer</strong> option.</p>
+</div>
+<ul>
+<li><strong>Color Channel</strong> - Choose which color channel to use.<ul>
+<li><em>Red</em> - Red channel</li>
+<li><em>Green</em> - Green channel</li>
+<li><em>Blue</em> - Blue channel</li>
+<li><em>Alpha</em> - Alpha channel</li>
+<li><em>Red, Green, Blue</em> - Red, Green, Blue channels</li>
+<li><em>Red, Green, Blue, Alpha</em> - Red, Green, Blue Alpha channels</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can choose any channel for the generated data, or multiple channels according to the documentation of the application that will use this data.<br />
+If you&rsquo;re unsure, or if you&rsquo;re not using vertex color to transmit other types of data, select the last option with all channels enabled, including Alpha.<br />
+This will help prevent additional errors, though it may slightly increase the data size of the model.</p>
+</div>
+<ul>
+<li><strong>Add to Existing</strong> - Add generated color to the existing vertex color instead of replacing it.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you&rsquo;re using vertex color to transmit other types of data, enable the <strong>Add to Existing</strong> option.<br />
+This allows you to overwrite only the channel specified in the <strong>Color Channel</strong> setting of this operator, without affecting the other channels.
+<strong>Note:</strong> The specified channel will be completely overwritten. Data inside the channel is not merged.</p>
+</div>
+<hr />
+<h4 id="show-max-bevel-by-material"><strong>Show Max Bevel by Material</strong></h4>
+<p>Show the maximum bevel value for the active or all materials.
+This operator displays the minimum and maximum bevel values of the object, including a breakdown by materials.</p>
+<p><img alt="Alt text" src="../img/bbq-screens/npanel/show_max_bevel_invoke.png" /></p>
+<ul>
+<li><strong>Use All Materials</strong> - Search for bevel values among all materials in the object. If this option is disabled, you will receive data only for the active material.</li>
+<li><strong>Units</strong> - Measurement units. Select the units in which you need to get the data.</li>
+</ul>
+<p><img alt="Alt text" src="../img/bbq-screens/npanel/show_max_bevel_by_mat_popup.png" /></p>
+<p>The data is displayed in a popup window.<br />
+Here you can see the unit of measurement (<strong>CENTIMETERS</strong>), the material name (<strong>Aluminium</strong>), and the minimum and maximum bevel values for that material.</p>
+<hr />
+<h4 id="node-vc-mask"><strong>Node VC Mask</strong></h4>
+<p>Create geometry node modifier and assign it to selected objects.</p>
+<p>This operator creates a <strong>Geometry Nodes</strong> modifier named <code>ZenBBQ_BevelsToVertexColor</code> for the selected object and generates a vertex color mask based on the bevel settings.  </p>
+<p>This process is dynamic, and the resulting vertex color will update as you modify the geometry or adjust bevel settings using the add-on.<br />
+The modifier also dynamically accounts for <a href="#live-boolean">Live Boolean</a> operations and the <a href="#live-boolean">Live Boolean (default) bevel radius</a> setting defined in the add-on preferences.</p>
+<p>If you have created more than one Boolean, make sure that this modifier is placed at the end of the modifier stack to reflect the current state of the geometry correctly, following best practices for modifier stack order.</p>
+<p><img alt="Bevel to VC Modifier" src="../img/bbq-screens/npanel/bevel_to_vc_modifier.png" /></p>
+<p>In the modifier settings, you can specify which channel(s) the mask should be generated in. You can select more than one channel.<br />
+Processing the Alpha channel is currently not possible using Geometry Nodes. Therefore, if you need to use the Alpha channel, please use the <a href="#create-vc-mask">Create VC Mask</a> operator.</p>
+<p>The <strong>Default Radius</strong> field in the modifier is informational only. You cannot change its value directly.<br />
+It is controlled via the <a href="#live-boolean">Live Boolean (default) bevel radius</a> setting and serves only as a convenient visual reference in the modifier.</p>
+<p>The operator creates a vertex color layer named <code>N_ZenBBQ_VC_Mask</code>, where the letter <strong>N</strong> indicates that the data in this layer is generated using nodes.  </p>
+<p>After the operator creates the modifier, you can use it by simply adding the modifier manually or together with your own node setups.<br />
+However, in that case, you need to create the layer named <code>N_ZenBBQ_VC_Mask</code> manually.</p>
+<hr />
 <h2 id="preferences">Preferences</h2>
 <p><img alt="Preferences" src="../img/bbq-screens/npanel/preferences.png" /></p>
 <h3 id="keymap">Keymap</h3>
@@ -260,6 +353,7 @@ In Mesh Edit Mode it sets zero bevel radius to the selection or, if no geometry 
 <h4 id="ask-for-switching-to-cycles">Ask for switching to Cycles</h4>
 <p><img alt="Preferences Confirm Cycles" src="../img/bbq-screens/npanel/preferences-confirm-cycles.png" /></p>
 <p>Zen BBQ requires Cycles render engine to show you result, so it automatically switches it when it&rsquo;s needed. For example if you click &ldquo;Render Preview&rdquo; in a new scene. With this option disabled, Zen BBQ shall not ask for confirmation once it needs to switch render engine to Cycles.</p>
+<hr />
 <h2 id="help">Help</h2>
 <p><img alt="Help" src="../img/bbq-screens/npanel/help.png" /></p>
 <h3 id="documentation">Documentation</h3>
@@ -311,14 +405,15 @@ In Mesh Edit Mode it sets zero bevel radius to the selection or, if no geometry 
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
