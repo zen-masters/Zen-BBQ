@@ -18,6 +18,14 @@ Let’s add a modifier that will create a Vertex Color Mask for use in Marmoset 
 
 ![Node VC Mask](img/bbq-screens/vcmask/button_node_vc_mask.png)
 
+A Geometry Nodes modifier will be added to the object, dynamically generating the vertex color and automatically updating it to reflect any changes in geometry or bevels.
+
+![vc modifier](img/bbq-screens/vcmask/blender_geom_nodes_modifier.png)
+
+!!! Tip  
+    You can freely modify the Geometry Nodes of this modifier to suit your needs. However, the next time you assign it to a new object in the same scene, it will use the modified version.  
+    If you want the addon to generate a fresh, default version of the node setup, simply remove all instances of the modifier from the scene. A new one will be created automatically.
+
 To preview the result, you need to make the generated vertex color layer active and enable viewport settings to show mesh attributes.
 
 - Expand the **Color Attributes** list and select the layer named `N_ZenBBQ_VC_Mask`.
@@ -51,10 +59,18 @@ Here is the result after importing into Toolbag:
 
 ![in Toolbag](img/bbq-screens/vcmask/toolbag_imported.png)
 
-Immediately after import, you’ll see the object but without any bevels. Let’s configure the material to get the expected result.
-
 !!! Tip
     You can adjust the **Albedo** color to enhance the highlight visibility. In the image above, the Albedo color is R:91 G:85 B:102. Also, in the material's **Reflectivity** settings, **Metalness** is set to 1.0.
+
+Right after importing the object into Toolbag, the bevels are not yet visible. To display them correctly, the material and render settings need to be configured.
+
+As noted in the documentation, the render mode must be changed to allow bevels to appear:
+
+> **Note:** The bevel shader is not supported in the Raster renderer. Make sure Hybrid or Ray Tracing is selected to preview the effect. Bevels can be baked to textures to view the result in Raster mode as well.
+
+In the render settings, switch the **Render Mode** to **Ray Tracing**.
+
+![Render Mode](img/bbq-screens/vcmask/toolbag_render_mode.png)
 
 In the object’s material settings, find the **Surface** tab. Open the dropdown labeled **Normals** and select **Bevel**.
 
