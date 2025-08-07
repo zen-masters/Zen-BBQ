@@ -1,8 +1,8 @@
 # Quick Guide: How to Use Vertex Color Mask
 
-This tutorial does not aim to teach you how to create bevels using the addon. If you're unfamiliar with that process, please refer to the [Quick Start](quickstart.md) section.
-
 This guide explains how to transfer bevel data from Blender to Marmoset Toolbag 5 using vertex color masking. Bevels are created in Blender with the addon, converted to a vertex color mask, and exported with the mesh. In Toolbag, the mesh is imported, a material is assigned, the bevel shader is enabled with vertex color masking, and the bevel width is set to match the maximum value used in Blender to achieve consistent visual results.
+
+Refer to the [Quick Start](quickstart.md) article for information on creating bevels.
 
 ## Blender
 
