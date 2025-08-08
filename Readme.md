@@ -4,6 +4,7 @@
 
 - [**Installation**](https://zen-masters.github.io/Zen-BBQ/installation/)
 - [**Quick Start Guide**](https://zen-masters.github.io/Zen-BBQ/quickstart/)
+- [**How to use Vertex Color Mask**](https://zen-masters.github.io/Zen-BBQ/guide_using_vc_mask/)
 
 ![Intro Zen BBQ](mkdocs/img/IntroBBQ.png)
 
