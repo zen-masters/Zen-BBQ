@@ -1,4 +1,4 @@
-# Zen BBQ 1.0 for Blender
+# Zen BBQ 1.2 for Blender
 
 ![I stand with Ukraine](img/I_stand_with_Ukraine_banner.svg)
 

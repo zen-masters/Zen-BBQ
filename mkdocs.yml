@@ -1,5 +1,5 @@
-site_name: Zen BBQ 1.0 for Blender
-site_description: Zen BBQ 1.0 for Blender Documentation
+site_name: Zen BBQ 1.2 for Blender
+site_description: Zen BBQ 1.2 for Blender Documentation
 nav:
     - Introduction: index.md
     - Installation: installation.md
@@ -10,7 +10,10 @@ nav:
     - How to Bake Normal Map: bake-tutor-1.md
     - How to use vertex color mask: guide_using_vc_mask.md
     - Troubleshooting: troubleshooting.md
-    - Changelog: changelog.md
+    - Changelog:
+        - Changelog: changelog.md
+        - Version 1.2.0: changelog/release_note_1.2.0.md
+        - Version 1.1.0: changelog/release_note_1.1.0.md
 docs_dir: mkdocs
 site_dir: docs
 theme: readthedocs

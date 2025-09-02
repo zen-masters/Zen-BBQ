@@ -1,5 +1,7 @@
 # Changelog
 ---
+- [Version 1.2.0](changelog/release_note_1.2.0.md) *Sep 2, 2025*
+
 - [Version 1.1.0](changelog/release_note_1.1.0.md) *Aug 6, 2025*
 
 - Version 1.0.2 *17 Nov, 2023*

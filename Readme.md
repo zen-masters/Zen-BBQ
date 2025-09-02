@@ -1,4 +1,4 @@
-# Zen BBQ for Blender 1.0
+# Zen BBQ for Blender 1.2
 
 ## Quick Start
 
