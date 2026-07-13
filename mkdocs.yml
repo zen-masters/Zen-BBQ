@@ -4,7 +4,14 @@ nav:
     - Introduction: index.md
     - Installation: installation.md
     - Quick Start: quickstart.md
-    - N-Panel: npanel.md
+    - Core Features:
+        - Main Panel: main_panel.md
+        - Bevels: subpanel_bevels.md
+        - Bake: subpanel_bake.md
+        - Tools: subpanel_tools.md
+        - Preferences: subpanel_preferences.md
+        - Help: subpanel_help.md
+        - Temp: npanel.md
     - Pie Menu: piemenu.md
     - Downloads: downloads.md
     - How to Bake Normal Map: bake-tutor-1.md

@@ -1,66 +1,6 @@
-# N-Panel
+# Core
 
 ## Main Panel
-
-### Preset Group Selection
-
-Please see [**Quick Start Guide**](quickstart.md#managing-presets) for instructions.
-
-![Main Panel Preset Group Selection](img/bbq-screens/npanel/main-preset-group-selection.png)
-
-#### 1. Bevel Preset Groups List Dropdown
-Allows you to select a preset group.
-#### 2. Add new Bevel Preset Group
-Allows you to add a custom preset group.
-#### 3. Remove Bevel Preset Group
-Allows you to remove the currently selected bevel preset group.
-#### 4. Import Bevel Preset Group
-Appears only if you open a scene that contains a bevel preset group that you don't have in your preferences. Allows you to save it from scene to your preferences for further usage.
-
-### Tools Block
-
-![Main Panel Tools Block](img/bbq-screens/npanel/main-tools-block.png)
-
-#### 1. Toggle Highlight Bevels On/Off
-
-Available only in Mesh Edit Mode. Toggles Highlight Bevels function on/off.
-
-#### 2. Smart Select
-
-Available only in Mesh Edit Mode. Selects the geometry that has the same assigned bevel radius to the selection. See [**Quick Start Guide**](quickstart.md#smart-select-with-n-panel)
-
-#### 3. Select by Preset
-
-Available only in Mesh Edit Mode. Selects the geometry that has the same assigned bevel radius to the preset that is currently chosen in the list below. See [**Quick Start Guide**](quickstart.md#select-by-preset)
-
-#### 4. Toggle material shader node
-
-To visualize bevel effect, the shader node is needed. It is assigned automatically to the object's materials at first add-on usage on this object. But you can toggle it manually by using this button.
-
-#### 5. Reset Selection
-
-On Object Mode it resets the whole object to default state.
-In Mesh Edit Mode it sets zero bevel radius to the selection or, if no geometry selected, to all object's geometry.
-
-### Presets List
-
-Please see [**Quick Start Guide**](quickstart.md#managing-presets) for instructions.
-
-![Main Panel Presets List](img/bbq-screens/npanel/main-presets-list.png)
-
-#### 1. Color Marker
-
-Color that will be used to show this bevel radius when the Highlight Bevels function is on. These 6 presets will be also included into the Pie Menu, clockwise. Triangle direction on the icon corresponds the position of this option in the Pie Menu.
-
-![Pie Menu Corresponcence](img/bbq-screens/npanel/preset-list-piemenu-correspondence.png)
-
-#### 2. Radius value and measurement unit
-
-Radius value and measurement unit, both editable.
-
-#### 3. Assign button
-
-Assigns the corresponding preset to the selection.
 
 ### Render Preview
 ![Main Panel Render Preview](img/bbq-screens/npanel/main-redner-preview.png)
