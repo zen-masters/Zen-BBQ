@@ -4,6 +4,10 @@
 
 Starting from version 2.0.0, the Main Panel has been redesigned into the **Zen Multi-Panel**. This new structure makes the addon UI highly customizable and allows you to build the perfect workspace for your current needs in just a few clicks.
 
+| Заголовок 1 | Заголовок 2 |
+| :--- | :--- |
+| Данные 1 | Данные 2 |
+
 ## Subpanels
 
 The Main Panel contains the following tabs:
