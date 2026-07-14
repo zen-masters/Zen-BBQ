@@ -1,3 +1,11 @@
+---
+title: "Baking Maps & Texture Generation"
+description: "Complete guide to the Zen BBQ Bake panel: configuring render targets, managing quality presets, setting up file naming templates, and troubleshooting UV errors."
+category: "Baking"
+tags: [zen-bbq, blender, bake, normal-map, ao, curvature, textures]
+related_files: [subpanel_bevels.md, manual_normal_map_baking.md, marmoset-integration.md]
+---
+
 # Bake Panel
 
 The **Bake** subpanel provides a complete, streamlined environment for configuring and baking texture maps (such as Normal, AO, and Curvature) directly inside Blender. It integrates object management, rendering engine settings, quality presets, and file output path templates into a single vertical layout.
@@ -125,8 +133,13 @@ Almost every map subpanel shares these two powerful workflow settings:
 
 ### 4. Material ID
 
-* **Generate BBQ Material ID:** By default, Blender assigns a plain gray color to the `Viewport Display -> Color` property of new materials. Since Zen BBQ utilizes these viewport colors to generate the Material ID pass, having multiple gray materials results in a broken ID map. Clicking this button automatically generates random, distinct colors for all materials on the selected objects. 
-* *Note:* The operator is smart—it will optionally replace only the default gray colors with random ones, preserving any custom viewport colors you have already manually configured.
+| ![Generate BBQ Material ID](gen_mat_id_op_prop.png) |
+|:---:|
+| *Fig. 6. Generate BBQ Material ID operator properties.* |
+
+* **Generate BBQ Material ID:** (See **Fig. 5** above) Automatically generates random, highly distinct viewport colors for all materials assigned to the selected objects. 
+* **Why this is needed:** By default, Blender assigns a flat gray color to the `Viewport Display -> Color` property of new materials. Since Zen BBQ utilizes these exact viewport colors to generate and bake the Material ID pass, having multiple identical gray materials will result in a broken, merged ID map.
+* **Smart Filtering:** The operator is non-destructive—it targets and replaces only the default, unedited gray colors, fully preserving any custom viewport colors you have already manually configured.
   
 ## Bake Misc (Performance & Verification Settings)
 
@@ -134,7 +147,7 @@ At the very bottom of the Bake interface, you will find the **Bake Misc** subpan
 
 | ![Bake Misc Panel](img/bbq-screens/npanel/bake-misc.png) |
 |:---:|
-| *Fig. 6. Global diagnostic toggles under the Bake Misc panel.* |
+| *Fig. 7. Global diagnostic toggles under the Bake Misc panel.* |
 
 * **Check Flipped UVs** (Checked by default)
 * **Check Overlapped UVs** (Checked by default)

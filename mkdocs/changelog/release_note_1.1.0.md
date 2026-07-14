@@ -1,3 +1,11 @@
+---
+title: "Zen BBQ Release Notes v1.1.0"
+description: "Detailed changes in version 1.1.0: Vertex Color Masking, Marmoset integration, and performance optimizations."
+category: "Changelog"
+tags: [zen-bbq, blender, changelog, vertex-color, marmoset, optimization]
+related_files: [changelog.md]
+---
+
 # Version 1.1.0
 
 ## **General**

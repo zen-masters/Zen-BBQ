@@ -1,5 +1,5 @@
-site_name: Zen BBQ 1.2 for Blender
-site_description: Zen BBQ 1.2 for Blender Documentation
+site_name: Zen BBQ 2.0 for Blender
+site_description: Zen BBQ 2.0 for Blender Documentation
 nav:
     - Introduction: index.md
     - Installation: installation.md
@@ -11,11 +11,12 @@ nav:
         - Tools: subpanel_tools.md
         - Preferences: subpanel_preferences.md
         - Help: subpanel_help.md
-        - Temp: npanel.md
     - Pie Menu: piemenu.md
+    - Live Boolean: live_boolean.md
     - Downloads: downloads.md
-    - How to Bake Normal Map: bake-tutor-1.md
-    - How to use vertex color mask: guide_using_vc_mask.md
+    - Tutorials:
+        - Manual Normal Map Baking: manual_normal_map_baking.md
+        - Marmoset Toolbag Integration: marmoset-integration.md
     - Troubleshooting: troubleshooting.md
     - Changelog:
         - Changelog: changelog.md

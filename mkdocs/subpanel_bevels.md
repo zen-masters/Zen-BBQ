@@ -1,3 +1,11 @@
+---
+title: "Bevels Subpanel & Display Modes"
+description: "Detailed guide on managing bevel presets, using the color-coded overlay, and switching between Material, Shader, and Image preview modes."
+category: "UI"
+tags: [zen-bbq, blender, bevel, presets, display-modes, viewport]
+related_files: [main_panel.md, quickstart.md, piemenu.md]
+---
+
 # Bevels
 
 The **Bevels** subpanel features a dedicated preset list for selecting and assigning bevel sizes, management for preset groups, and a toggle to control how your objects are visualized in the Blender viewport.
@@ -23,6 +31,8 @@ To the right of the list, you will find list management buttons and auxiliary op
 - **Select by Selected Preset:** Selects all geometry in the mesh that matches the Bevel Value of the active preset in the list.
 - **Add Entry (+):** Adds a new bevel preset to the list.
 - **Remove Entry (-):** Removes the active bevel preset from the list.
+
+### Advanced Operators
 
 The drop-down arrow button contains advanced operators that are used less frequently:
 
@@ -171,7 +181,7 @@ Zen BBQ uses a strict color-coded system to give you instant visual feedback on 
 
 * <span style="color:#5C5668;">██</span> **Eggplant Color (#5C5668FF):** The default material color used for **Shader Mode**. It provides an optimized, neutral matte surface for inspecting real-time procedural bevels.
 * <span style="color:#585878;">██</span> **Blue-Gray Color (#585878FF):** The default **Bake Preview Color** used for **Image Mode**. It shares a similar tone to the Shader Mode for easy comparison, but leans slightly bluer to match the standard look of a Normal Map.
-* <span style="color:#4F6058;">██</span> **Default Material Color (#4F6058FF):** Because the engine relies on materials to preview bevels, Zen BBQ will automatically assign a temporary fallback material if your object doesn't have one. You can customize this fallback color in the [Preferences -> Common](preferences.md#common-settings) panel.
+* <span style="color:#4F6058;">██</span> **Default Material Color (#4F6058FF):** Because the engine relies on materials to preview bevels, Zen BBQ will automatically assign a temporary fallback material if your object doesn't have one. You can customize this fallback color in the [Preferences -> Common](subpanel_preferences.md#common-settings) panel.
 
 #### Advanced Shader Setting: Shader Bevels Preview
 Within the **Shader** popover, you will find the **Shader Bevels Preview** checkbox. 

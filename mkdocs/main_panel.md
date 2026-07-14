@@ -1,22 +1,28 @@
+---
+title: "Main Panel Overview"
+description: "Introduction to the Zen Multi-Panel system: subpanel navigation, pinning features, and workspace customization."
+category: "UI"
+tags: [zen-bbq, blender, ui, multi-panel, navigation]
+related_files: [subpanel_bevels.md, subpanel_bake.md, subpanel_tools.md, subpanel_preferences.md]
+---
+
 # Main Panel
 
-![Main Panel](img/bbq-screens/npanel/main_panel.png)
+| ![Main Panel](img/bbq-screens/npanel/main_panel.png) |
+|:--:|
+| *Fig. 1. Zen BBQ Main Panel* |
 
 Starting from version 2.0.0, the Main Panel has been redesigned into the **Zen Multi-Panel**. This new structure makes the addon UI highly customizable and allows you to build the perfect workspace for your current needs in just a few clicks.
-
-| Заголовок 1 | Заголовок 2 |
-| :--- | :--- |
-| Данные 1 | Данные 2 |
 
 ## Subpanels
 
 The Main Panel contains the following tabs:
 
-- **Bevels.** Used for assigning and authoring bevels. Here you can also create bevel size presets for your project and configure the visual representation of your object in the Blender viewport.
-- **Bake.** Contains settings for baking normal maps and other map types required for your project pipeline.
-- **Tools.** Features a set of utility tools designed to help you create high-quality bevels, optimize the baking process, and export data for further processing in third-party applications.
-- **Preferences.** Configures global addon settings to fit your personal workflow.
-- **Help.** Provides direct access to documentation and links to download demo scenes used in tutorials.
+- **[Bevels.](subpanel_bevels.md)** Used for assigning and authoring bevels. Here you can also create bevel size presets for your project and configure the visual representation of your object in the Blender viewport.
+- **[Bake.](subpanel_bake.md)** Contains settings for baking normal maps and other map types required for your project pipeline.
+- **[Tools.](subpanel_tools.md)** Features a set of utility tools designed to help you create high-quality bevels, optimize the baking process, and export data for further processing in third-party applications.
+- **[Preferences.](subpanel_preferences.md)** Configures global addon settings to fit your personal workflow.
+- **[Help.](subpanel_help.md)** Provides direct access to documentation and links to download demo scenes used in tutorials.
 
 ## Multi-Panel Features
 

@@ -1,3 +1,11 @@
+---
+title: "Zen BBQ Release Notes v1.2.0"
+description: "Detailed changes in version 1.2.0: Update function, bevel statistics, and bug fixes."
+category: "Changelog"
+tags: [zen-bbq, blender, changelog, updates, statistics, optimization]
+related_files: [changelog.md]
+---
+
 # Version 1.2.0
 
 ## **General**

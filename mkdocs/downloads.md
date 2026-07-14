@@ -1,3 +1,11 @@
+---
+title: "Downloads & Stores"
+description: "Links to official Zen BBQ stores on Gumroad and BlenderMarket."
+category: "Downloads"
+tags: [zen-bbq, blender, download, gumroad, blendermarket]
+related_files: [index.md, installation.md]
+---
+
 # Downloads
 
 

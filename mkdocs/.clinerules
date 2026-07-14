@@ -1,0 +1,34 @@
+# Zen BBQ Documentation Project Rules
+
+You are assisting in maintaining the official Markdown documentation for the Zen BBQ Blender addon. Follow these strict guidelines for every file modification, creation, or link update.
+
+## 1. Technical Context & Feature Accuracy (Zen BBQ 2.0+)
+* **Display Modes:** There is NO "eye" icon for previewing. Users must switch between three dedicated preview buttons: `Material`, `Shader`, and `Image` in the Bevels panel.
+* **Baking Presets:** Quality presets (like `High`) are located and configured directly inside the `Bake` panel under the `Bake Render Presets` section.
+* **Visual Presets:** Use the term `Colored Squares` (NOT "Colored Triangles") when referencing the preset assignment buttons in the Pie Menu or UI.
+* **Tonal Guideline:** Keep the documentation professional, technical, and clear. Avoid outdated marketing jokes (such as references to "vegetable storage" or "charging models for dollars").
+
+## 2. Formatting, Language & Visual Guidelines
+* **Strict Language Rule:** All documentation files, headers, titles, descriptions, YAML metadata, and general content MUST be written exclusively in **English**. Do not use any other languages.
+* **Image Tables:** All screenshots and visual figures MUST be formatted inside clean Markdown tables with centered captions. Use the following exact structure:
+  | ![Alt Text](img/path/to/image.png) |
+  |:---:|
+  | *Fig. X. Detailed caption describing the image.* |
+* **File Names:** All new documentation files must use lowercase **kebab-case** (e.g., `manual-normal-baking.md`).
+* **Formatting:** Avoid dense walls of text. Use headings, bold key terms, and bullet points to maximize scannability. Use blockquotes (`> 💡 **Note:** ...`) for tips and warnings.
+
+## 3. Link Consistency & File Cleanup
+* Always verify that cross-references to other articles are valid (e.g., `[Main Panel](npanel.md#section)`).
+* Scan for duplicates and redundant explanations across files. If you find duplicated info, consolidate it and use cross-links.
+
+## 4. LLM-Friendly & AI-Readable Optimization (RAG & Context Ready)
+To ensure that LLMs can perfectly parse, index, and retrieve answers from these files:
+* **YAML Frontmatter:** Every Markdown file MUST start with a YAML block containing explicit metadata (written in English):
+  ```yaml
+  ---
+  title: "Clear Article Title"
+  description: "Brief 1-2 sentence summary of what this article covers."
+  category: "UI / Baking / Materials"
+  tags: [zen-bbq, blender, bevel, workflow]
+  related_files: [related-file-1.md, related-file-2.md]
+  ---

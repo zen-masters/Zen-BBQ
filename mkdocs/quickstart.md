@@ -1,3 +1,11 @@
+---
+title: "Quick Start Guide"
+description: "Essential steps to begin using Zen BBQ: assigning bevels, previewing results, and managing presets."
+category: "Workflow"
+tags: [zen-bbq, blender, bevel, quickstart, tutorial]
+related_files: [index.md, piemenu.md, subpanel_bevels.md]
+---
+
 # Zen BBQ Quick Start Guide
 
 ![Intro Zen BBQ](img/IntroBBQ.png)
