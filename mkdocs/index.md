@@ -10,7 +10,7 @@ related_files: [installation.md, quickstart.md, main_panel.md, subpanel_bake.md]
 
 ![I stand with Ukraine](img/I_stand_with_Ukraine_banner.svg)
 
-**Zen BBQ** (Build Bevels Quickly) is a professional toolset for Blender designed to create, adjust, visualize, and **bake** bevels in a fully non-destructive manner. By leveraging the power of the **Cycles Bevel Shader**, the addon allows you to achieve realistic rounded edges on object intersections without complex topology preparation, and then seamlessly bake them into production-ready texture maps.
+**Zen BBQ** (Build Bevels Quickly) is a professional toolset for Blender designed to create, adjust, visualize, and **bake** bevels in a fully non-destructive manner. By leveraging the power of the **Cycles Bevel Shader**, the addon allows you to achieve realistic rounded edges without complex topology preparation, and then seamlessly bake them into production-ready texture maps.
 
 ![Intro Zen BBQ](img/IntroBBQ.png)
 
@@ -34,7 +34,9 @@ Traditional workflows require significant time to maintain clean high-poly topol
 ## Key System Features
 
 ### 1. Bevel Management
+
 A centralized preset system provides flexible radius control.
+
 * **Preset Groups**: Organize sets of bevel values with different measurement units.
 * **Color-Coded Overlay**: Each preset corresponds to a unique viewport color for instant visual diagnostics.
 * **Edge & Vertex Attributes**: Bevel data is stored directly in mesh attributes, allowing for non-uniform, per-element width control.
@@ -42,7 +44,9 @@ A centralized preset system provides flexible radius control.
 👉 [**Learn more about Bevels Subpanel**](subpanel_bevels.md)
 
 ### 2. Viewport Display Engine
+
 A powerful visualization toolset for cycling through different preview modes:
+
 * **Material Mode**: Displays your original, unaltered user materials.
 * **Shader Mode**: Real-time visualization of procedural bevels and diagnostic maps (Normal, AO, Curvature, Mask, etc.) using Cycles.
 * **Image Mode**: Preview baked texture maps directly on the model to verify quality before export.
@@ -50,7 +54,9 @@ A powerful visualization toolset for cycling through different preview modes:
 👉 [**Deep dive into Viewport Display**](subpanel_bevels.md#viewport-display-engine)
 
 ### 3. Advanced Baking Pipeline
+
 A streamlined environment for generating Normal, AO, Curvature, and ID maps.
+
 * **Object Monitor**: Intelligent pre-bake checklist and error logging (detects missing UVs, flipped islands, and overlaps).
 * **Naming Templates**: Automation of file naming using dynamic tokens like `%OBJECT%` and `%SUFFIX%`.
 * **Sampling Presets**: Quick toggles between Low, Medium, and High quality profiles for baking.
@@ -58,6 +64,7 @@ A streamlined environment for generating Normal, AO, Curvature, and ID maps.
 👉 [**Bake Panel Guide**](subpanel_bake.md) | [**Manual Baking Tutorial**](manual_normal_map_baking.md)
 
 ### 4. Workflow Utilities (Tools)
+
 * **Live Boolean Integration**: Automatically assigns a default bevel radius to new intersection edges created by non-destructive Boolean modifiers. [**Read more**](live_boolean.md).
 * **Normal Map Tools**: Includes the **Explode System** for artifact-free baking, **Weighted Normal** injection, and the **Normal Mixer** for blending procedural bevels with micro-textures.
 * **Vertex Color Mask**: Encodes bevel parameters into Vertex Color attributes for export to external suites like **Marmoset Toolbag**.
@@ -65,7 +72,8 @@ A streamlined environment for generating Normal, AO, Curvature, and ID maps.
 👉 [**Tools Overview**](subpanel_tools.md) | [**Marmoset Toolbag Integration**](marmoset-integration.md)
 
 ### 5. Zen Multi-Panel UI
-Featuring a modular interface where you can customize your workspace by pinning subpanels, rearranging their order, or extracting them as independent Blender menus.
+
+Featuring a modular interface where you can customize your workspace by pinning subpanels and rearranging their order.
 
 👉 [**Main Panel Overview**](main_panel.md) | [**Pie Menu Guide (Ctrl+Shift+X)**](piemenu.md)
 

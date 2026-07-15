@@ -2,7 +2,7 @@
 title: "Installation Guide"
 description: "Step-by-step instructions for installing Zen BBQ as a local Blender Extension."
 category: "Installation"
-tags: [zen-bbq, blender, installation, setup, commercial-extension]
+tags: [zen-bbq, blender, installation, setup, extension]
 related_files: [index.md, quickstart.md]
 ---
 
@@ -34,7 +34,9 @@ If you prefer using Blender's standard menus:
 5. In the file browser, locate and select your downloaded **`ZenBBQ_2_0.zip`** file.
 6. Verify that the **Zen BBQ** checkbox is checked (enabled) in your extensions list.
 
-![Installation](img/bbq-screens/installation/installation.png)
+| ![Installation](img/bbq-screens/installation/installation.png) |
+|:---:|
+| *Fig. 1. Blender Preferences panel. |
 
 ---
 
