@@ -241,3 +241,7 @@ To the right of the display mode switcher buttons, there are additional quick-ac
 
 !!! warning "Warning"
     Using **Repair Preview Nodes** will completely delete and regenerate all custom nodes created by Zen BBQ. If you have manually edited or customized any of these underlying shader node networks, all your changes will be permanently lost. Use this operator with caution!
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

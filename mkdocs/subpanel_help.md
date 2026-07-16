@@ -43,3 +43,7 @@ The **Examples** section allows you to browse, download, and explore pre-configu
 * **Interactive List:** Displays all available scenes. Click on any entry to view its description and details.
 * **Blender Icon (Quick Open):** Located on the right side of the active scene row. Click this icon to open the downloaded `.blend` file immediately.
 * **More Info:** Opens a web page with in-depth technical documentation and explanations for the selected example (e.g., detail break-downs of the Carburetor scene).
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

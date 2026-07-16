@@ -8,8 +8,10 @@ related_files: [index.md, installation.md]
 
 # Downloads
 
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq)
 
-![Gumroad](img/icons/services/gumroad-16.png) [**Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq)
+[![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq)
 
-![Superhive](img/icons/services/superhive-16.png) [**Superhive**](https://superhivemarket.com/products/zen-bbq)
+# Support
 
+[![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

@@ -31,3 +31,7 @@ The primary control for non-destructive boolean workflows is located in the Zen 
 4. **Adjust on the Fly:** You can change the global fallback radius at any time, and all non-destructive boolean cuts on the object will update their bevel widths accordingly.
 
 > 💡 **Note:** To customize default behavior and default measurement units for the fallback radius, refer to the [Zen BBQ Preferences documentation](subpanel_preferences.md).
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

@@ -54,3 +54,7 @@ Assign the corresponding bevel preset from the N-Panel to the selected geometry 
 
 * **Just click:** Toggles the **Render Preview** mode (see [**Quick Start Guide**](quickstart.md#previewing-the-result)).
 * **Ctrl + click:** Toggles the **Highlight Bevels** overlay (same as in the [**N-Panel**](subpanel_bevels.md/#activating-the-overlay)).
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

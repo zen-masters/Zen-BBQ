@@ -168,3 +168,7 @@ Marmoset immediately processes the vertex color attributes, scaling each edge's 
 | ![Final Rendered Asset](img/bbq-screens/vcmask/toolbag_final.png) |
 |:---:|
 | *Fig. 15. The final real-time render matching our physical 1-5 cm bevel ranges precisely.* |
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

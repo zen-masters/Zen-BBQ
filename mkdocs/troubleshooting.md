@@ -64,3 +64,7 @@ If you are using a non-destructive Boolean workflow and the new cuts do not auto
 
 If you have any question, please let us know:
 ![Discord](img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

@@ -110,8 +110,6 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 
 **Enjoy this experience with us!**
 
-![Gumroad](img/icons/services/gumroad-16.png) [**Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | ![Superhive](img/icons/services/superhive-16.png) [**Superhive**](https://superhivemarket.com/products/zen-bbq) | ![Discord](img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
+---
 
-<!-- blank line -->
-----
-<!-- blank line -->
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

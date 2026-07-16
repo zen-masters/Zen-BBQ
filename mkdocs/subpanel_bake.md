@@ -155,3 +155,7 @@ At the very bottom of the Bake interface, you will find the **Bake Misc** subpan
 ### Performance & Workflow Impact
 * **Why turn them off?** Scanning complex meshes with massive polycounts or dense UV sets for overlapping or flipped islands can introduce a slight computational overhead. If you are confident in your UV layout and want to squeeze out maximum baking performance, you can optionally uncheck these options to speed up the pre-bake pipeline initialization.
 * **Non-Blocking Warnings:** It is important to note that **these checks never halt or interrupt the baking process**. If Zen BBQ detects flipped or overlapping UVs while these options are active, it will continue baking your maps uninterrupted. The errors will simply be printed as non-blocking diagnostic warnings in the **Object Monitor Log** upon completion, allowing you to review the quality report post-render.
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

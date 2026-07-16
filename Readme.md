@@ -63,4 +63,4 @@ Are you tired of preparing complex geometry, fighting shading issues, or sliding
 
 Enjoying the Zen BBQ experience? Stay connected or get support via our official channels:
 
-[![Gumroad](mkdocs/img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![BlenderMarket](mkdocs/img/icons/services/superhive-16.png) **BlenderMarket**](https://blendermarket.com/products/zen-bbq) | [![Discord](mkdocs/img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)
+[![Gumroad](mkdocs/img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](mkdocs/img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](mkdocs/img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

@@ -80,3 +80,7 @@ At the bottom of the Preferences panel, you can manage the visibility and layout
 * **Floating Toggles:** 
     * When **unchecked** (Default), the corresponding panel is docked directly inside Zen BBQ's custom **Multi-Panel** system, selectable via the top tab icons (*Fig. 6*).
     * When **checked**, that specific subpanel is extracted from the tabbed interface and behaves like a **standard Blender subpanel**. It will sit independently in the N-panel, allowing you to collapse, expand, or reposition it like a native Blender menu.
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

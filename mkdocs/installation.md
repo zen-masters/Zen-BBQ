@@ -44,3 +44,7 @@ If you prefer using Blender's standard menus:
 
 * **Blender Version:** Because Zen BBQ 2.0+ relies on the local extension architecture, it requires **Blender 4.2 LTS** or newer. For legacy versions of Blender, please use the legacy Zen BBQ 1.x addon format.
 * **Accessing the UI:** Once successfully installed and activated, Zen BBQ will appear in the **N-Panel** (sidebar) of your 3D Viewport under the **Zen BBQ** tab. Alternatively, you can summon the **Pie Menu** using the global hotkey: `Ctrl + Shift + X`.
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

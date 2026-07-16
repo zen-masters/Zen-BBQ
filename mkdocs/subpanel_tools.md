@@ -226,3 +226,7 @@ Legacy versions of Blender could not read custom attributes within the Bevel mod
 ### Generate BBQ Material ID
 
 This operator provides quick local access to the Material ID assignment tool. It functions identically to the utility fully detailed in the [Baking Material IDs](subpanel_bake.md#4-material-id) pipeline section, assigning unique distinct color profiles across material groups for seamless color ID generation.
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

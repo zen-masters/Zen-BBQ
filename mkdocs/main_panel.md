@@ -37,3 +37,7 @@ The image above demonstrates the status of the subpanels, which is indicated by 
 - **Pinned Status (Red):** The icon for the top **Bake** panel is colored red, and the Pin icon to the right of its name is filled. This indicates that the panel is locked (pinned) and will remain visible when you interact with other panels.
 - **Active Status (Cyan/Blue):** The other active icons are colored cyan, meaning they are currently open but not locked. Their Pin icons are displayed as unfilled outlines.
 - **Inactive Status (No Color):** If a subpanel is closed and inactive, its icon will have no color indicator.
+
+---
+
+[![Gumroad](img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![Superhive](img/icons/services/superhive-16.png) **Superhive**](https://blendermarket.com/products/zen-bbq) | [![Discord](img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)
