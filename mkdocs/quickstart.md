@@ -23,7 +23,9 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 * Click the **"●"** button **to the right of** your desired bevel radius.
 * The bevel will be assigned. If you are in **Edit Mode**, the bevel weight is applied only to the **selected edges**. If you are in **Object Mode**, the bevel is assigned to **all edges** of the object.
 
-![Assign Bevel with N-Panel](img/bbq-screens/quickstart/assign-bevel-panel.gif)
+| ![Assign Bevel with N-Panel](img/bbq-screens/quickstart/assign-bevel-panel.gif) |
+|:---:|
+| *Fig. 1. Assign Bevel with N-Panel* |
 
 ### Assign bevel with Pie Menu
 
@@ -33,7 +35,9 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 * Select your desired bevel value from the wheel.
 * The bevel will be assigned. If you are in **Edit Mode**, the bevel weight is applied only to the **selected edges**. If you are in **Object Mode**, the bevel is assigned to **all edges** of the object.
 
-![Assign Bevel with Pie Menu](img/bbq-screens/quickstart/assign-bevel-piemenu.gif)
+| ![Assign Bevel with Pie Menu](img/bbq-screens/quickstart/assign-bevel-piemenu.gif) |
+|:---:|
+| *Fig. 2. Assign Bevel with Pie Menu* |
 
 ## Previewing the result
 
@@ -42,7 +46,9 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 * If your model appears too dark, click the **Use Scene World** button on the far right of the row next to the **Shader** button.
 * In the **Shader Render Preset** block, you can choose the desired preview quality by clicking the **Low**, **Med**, or **High** buttons.
 
-![Render Preview](img/bbq-screens/quickstart/render-preview.gif)
+| ![Render Preview](img/bbq-screens/quickstart/render-preview.gif) |
+|:---:|
+| *Fig. 3. Previewing the result* |
 
 ## Managing Presets
 
@@ -52,9 +58,12 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 * **Deleting Groups:** To remove the currently active preset group, click the **Minus (-)** button.
 * **Resetting Preses:** If you need to restore all preset groups to their original factory values, navigate to the **Preferences** panel and click **Reset Preferences**.
 
-> ⚠️ **Warning:** Clicking *Reset Preferences* will restore all preset groups to their default states and will also reset all other custom addon configurations.
+!!! warning
+    Clicking *Reset Preferences* will restore all preset groups to their default states and will also reset all other custom addon configurations.
 
-![Managing Presets](img/bbq-screens/quickstart/manage-preferencs.gif)
+| ![Managing Presets](img/bbq-screens/quickstart/manage-preferencs.gif) |
+|:---:|
+| *Fig. 4. Managing Presets* |
 
 ## Selection by Bevel
 
@@ -66,7 +75,9 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 * All edges sharing the same bevel value will automatically be selected.
 * Use Blender's Operator Options panel at the bottom-left of the screen to adjust the selection threshold/tolerance.
 
-![Smart Select with N-Panel](img/bbq-screens/quickstart/smart-select-panel.gif)
+| ![Smart Select with N-Panel](img/bbq-screens/quickstart/smart-select-panel.gif) |
+|:---:|
+| *Fig. 5. Smart Select* |
 
 #### Select by Preset
 
@@ -76,7 +87,9 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 * All edges assigned to the selected preset will be selected.
 * Use Blender's Operator Options panel to fine-tune the selection accuracy or enable **Add to selection** mode. When this option is enabled, your previously selected geometry will remain selected alongside the new selection.
 
-![Select by Preset](img/bbq-screens/quickstart/select-by-preset.gif)
+| ![Select by Preset](img/bbq-screens/quickstart/select-by-preset.gif) |
+|:---:|
+| *Fig. 6. Select by Preset* |
 
 ## Baking
 
@@ -91,7 +104,9 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 * Click the **Image** preview button to switch the viewport display mode.
 * **See the result!** Your baked texture maps are now displayed directly on the model.
 
-![Select by Preset](img/bbq-screens/quickstart/bake.gif)
+| ![Baking](img/bbq-screens/quickstart/bake.gif) |
+|:---:|
+| *Fig. 7. Baking* |
 
 **Enjoy this experience with us!**
 
