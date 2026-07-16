@@ -1,0 +1,51 @@
+# Zen BBQ 2.0
+
+Zen BBQ (Build Bevels Quickly) is a professional toolset for Blender designed for creating, adjusting, visualizing, and baking non-destructive bevels. It leverages the Cycles Bevel Shader to achieve realistic rounded edges without complex topology, allowing for a fully non-destructive workflow where bevels are generated at the shader level and can be baked into production-ready Normal, AO, and Curvature maps.
+
+## Metadata
+- **Blender Version:** 4.2+ (installed as a local extension).
+- **Global Hotkey:** `Ctrl + Shift + X` (Pie Menu).
+- **UI Location:** N-Panel -> Zen BBQ tab.
+- **Core Engine:** Cycles (required for procedural bevel preview and baking).
+
+## Core Documentation
+- [index.md](mkdocs/index.md): Introduction to core concepts, advantages of non-destructive beveling, and application areas.
+- [installation.md](mkdocs/installation.md): Step-by-step instructions for installing the addon as a local Blender Extension.
+- [quickstart.md](mkdocs/quickstart.md): Essential workflow steps for assigning, previewing, and baking your first bevels.
+- [subpanel_bevels.md](mkdocs/subpanel_bevels.md): Detailed guide on managing bevel presets, color-coded overlays, and viewport display modes (Material, Shader, Image).
+- [subpanel_bake.md](mkdocs/subpanel_bake.md): Comprehensive guide to the baking pipeline, including object monitoring, quality presets, and naming templates.
+- [subpanel_tools.md](mkdocs/subpanel_tools.md): Overview of advanced utilities like Live Boolean, Explode System, and Vertex Color Masking.
+- [piemenu.md](mkdocs/piemenu.md): Reference for fast viewport commands available via the `Ctrl+Shift+X` shortcut.
+- [live_boolean.md](mkdocs/live_boolean.md): Deep dive into the automated workflow for beveling dynamic Boolean intersections.
+- [subpanel_preferences.md](mkdocs/subpanel_preferences.md): Customization of hotkeys, UI styles, default materials, and panel layout management.
+- [manual_normal_map_baking.md](mkdocs/manual_normal_map_baking.md): Tutorial for manually baking Zen BBQ bevels using native Cycles settings.
+- [marmoset-integration.md](mkdocs/marmoset-integration.md): Workflow for transferring variable-width bevel data to Marmoset Toolbag using Vertex Color masks.
+- [troubleshooting.md](mkdocs/troubleshooting.md): Solutions for common issues related to installation, viewport display, and baking artifacts.
+- [subpanel_help.md](mkdocs/subpanel_help.md): Access to community Discord, official documentation, and interactive example scenes.
+
+## Quick Reference
+
+### Installation
+- **Method 1 (Drag-and-Drop):** Drag `ZenBBQ_2_0.zip` directly into the Blender 3D Viewport and click **Install**.
+- **Method 2 (Get Extensions):** Go to `Edit > Preferences > Get Extensions`, click the top-right arrow, select **Install from Disk...**, and choose the zip file.
+
+### Assigning Bevels
+- **N-Panel:** Select geometry, go to **Zen BBQ** tab, and click the **"●"** button next to a preset radius.
+- **Pie Menu:** Press `Ctrl + Shift + X` and select a color-coded preset from the wheel.
+- **Modes:** In **Edit Mode**, assignments apply to selected edges/vertices. In **Object Mode**, assignments apply to the entire object.
+- **Visualization:** Toggle the **Highlight Bevels** icon (intersecting circles) to see color-coded bevel weights in the viewport.
+
+### Managing Presets
+- **Groups:** Use the Preset Groups dropdown to switch between units (mm, cm, m, in, ft).
+- **Customization:** Click the **"+"** button to create a new group. Click any preset value to edit its radius or unit.
+- **Resetting:** Go to **Preferences** and click **Reset Preferences** to restore factory defaults.
+
+### Selection Tools
+- **Smart Select:** In Edit Mode, select an edge and click the **Smart Select** icon (arrow with eye) to select all edges with the same radius.
+- **Select by Preset:** Choose a preset in the list and click the **Select by Selected Preset** button to find all matching geometry.
+
+### Baking Workflow
+- **UV Check:** Ensure the object has a valid UV map without flipped islands or overlaps (checked automatically by Object Monitor).
+- **Quality:** In the **Bake Panel**, select **Low**, **Med**, or **High** quality from the **Bake Render Presets**.
+- **Start Bake:** Click the **Start Bake** (Play) icon. Monitor progress and errors in the **Object Monitor** log.
+- **Preview:** Switch to **Image** mode in the Bevels panel to verify baked results directly on the model.

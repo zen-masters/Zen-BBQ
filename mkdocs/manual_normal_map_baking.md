@@ -69,7 +69,7 @@ Before baking, ensure your target mesh has a clean, bake-ready UV layout. While 
 
 ## 3. Blender Baking Settings
 
-1. Make sure your active rendering engine in the **Render Properties** tab is set to **Cycles** (baking is not supported in Eevee).
+1. Make sure your active rendering engine in the **Blender Render Properties** tab is set to **Cycles** (baking is not supported in Eevee).
 2. To ensure high-quality normal map generation, open the Zen BBQ **Bake** panel, find **Bake Render Presets**, and select the **High** preset.
 
 | ![Bake High Preset](img/bake-tutor-1/npanel-high.png) |

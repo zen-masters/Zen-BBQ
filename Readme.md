@@ -1,42 +1,66 @@
-# Zen BBQ for Blender 1.2
+---
+title: "Introduction"
+description: "Welcome to Zen BBQ 2.0 documentation. Build Bevels Quickly in Blender 4.2+."
+category: "Overview"
+tags: [zen-bbq, blender, introduction, overview]
+related_files: [installation.md, quickstart.md]
+---
+
+# Zen BBQ for Blender 2.0
 
 ## Quick Start
 
-- [**Installation**](https://zen-masters.github.io/Zen-BBQ/installation/)
-- [**Quick Start Guide**](https://zen-masters.github.io/Zen-BBQ/quickstart/)
-- [**How to use Vertex Color Mask**](https://zen-masters.github.io/Zen-BBQ/guide_using_vc_mask/)
+* [**Installation**](installation.md) — How to install Zen BBQ as a local Blender Extension.
+* [**Quick Start Guide**](quickstart.md) — Your first steps from assigning to baking.
+* [**Troubleshooting**](troubleshooting.md) — Solutions to common issues and pipeline questions.
 
 ![Intro Zen BBQ](mkdocs/img/IntroBBQ.png)
 
+---
+
 ## Introduction
 
-Zen BBQ is an add-on for creating, adjusting and visualizing Bevels in a couple of clicks! Are you tired of preparing geometry for the Subd or Bevel modifiers? Look no further! 
+**Zen BBQ** is a professional toolset for Blender designed to create, adjust, visualize, and bake non-destructive procedural bevels in a couple of clicks! 
 
-### Application area
-- **Visualization**. Bevels catch light and help the eye to define object shapes better. Make your models more realistic and appealing without changing geometry!
-- **Concept Art**. Design awesome objects easily! Just stick Mesh Elements into each other, get smooth transitions and create cool shapes. Special thanks to Tor Frick!
-- **Game Development**. Don't forget that BBQ Bevels can be baked into Normal Maps for GameDev models. Save hours of your time without cutting support loops for your High-poly model!
+Are you tired of preparing complex geometry, fighting shading issues, or sliding support loops for Subd or Bevel modifiers? Look no further!
 
-### Main Features
-- **Full control over Bevel Shader Node** in Cycles. Set Values for the entire model or for each Edge and Vertex individually.
-- **The whole range of Measurement Units**. Set Bevel Radius in MM, CM, M, KM, IN, FT etc.
-- **Custom Preset Groups**. Use existing Bevel Preset Groups with different Units or create your own.
-- **Friendly to your Materials**. Zen BBQ stores its Values in the mesh attributes and embeds into your Materials in a non-destructive way.
-- **Smart Render Preview System**. Preview Bevels in one click!
-- **Viewport Display** System. Visually control each Bevel Preset by color in Viewport.
-- **Intuitive UI** with multifunctional Main and Pie menus.
-- **Quick Support** on the Discord channel.
+### Application Areas
 
- **Zen BBQ - Build Bevels Quickly!**
+* **Visualization:** Bevels catch light highlights and help the eye define object shapes. Make your models look realistic and physically accurate without adding extra polygons to your geometry.
+* **Concept Art & Booleans:** Design awesome hard-surface objects with ease. Just stick mesh elements into each other, use our *Live Boolean* integration, get smooth transitions, and create complex shapes on the fly.
+* **Game Development:** Bake your procedural BBQ Bevels into clean Normal Maps for game-ready assets. Save hours of tedious high-poly modeling by skipping support loops entirely!
+
+---
+
+## Main Features
+
+* **Complete Cycles Bevel Shader Control:** Set bevel values globally for the entire model or assign custom weights to individual Edges and Vertices.
+* **Local Extension Architecture:** Fully compatible with **Blender 4.2 LTS** and newer, utilizing the modern Extension system for hassle-free offline installation.
+* **Flexible Measurement Units:** Set and mix bevel radii in Millimeters (mm), Centimeters (cm), Meters (m), Inches (in), and more within a single list.
+* **Custom Preset Groups:** Organize your most-used radii into custom groups and access them instantly.
+* **Non-Destructive & Material Friendly:** Zen BBQ stores bevel values directly in native mesh attributes, seamlessly embedding them into your existing shader networks.
+* **Smart Render Preview System:** Instantly toggle between **Material**, **Shader** (Cycles preview), and **Image** (Baked texture) viewport modes.
+* **Viewport Color Overlay:** Visually distinguish assigned bevel sizes in the viewport using the customizable **Highlight Bevels** color scheme.
+* **Intuitive UI:** Access everything you need via the clean **Sidebar (N-Panel)** or summon the quick-action **Pie Menu** via the global `Ctrl + Shift + X` hotkey.
+* **Advanced Baking Pipeline:** Bake your bevels into Normal, Ambient Occlusion (AO), and Curvature maps directly inside Blender.
+
+**Zen BBQ — Build Bevels Quickly!**
+
+---
 
 ![Same Lowpoly Geometry](mkdocs/img/promo-images/Carburetor_Before_After.jpg)
-<br />
-![No need to sew together](mkdocs/img/promo-images/Carburetor_Nosew.jpg)
 <br />
 ![Adjustable Bevel Radius](mkdocs/img/promo-images/Carburetor_Controllable_Radii.jpg)
 <br />
 ![Colorized Edge Display](mkdocs/img/promo-images/Carburetor_Colorized_Display.jpg)
-<br />
-**Enjoy this experience with us!**
 
-![Gumroad](mkdocs/img/icons/services/gumroad-16.png) [**Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | ![BlenderMarket](mkdocs/img/icons/services/blendermarket-16.png) [**BlenderMarket**](https://www.blendermarket.com/products/zen-bbq) | ![Discord](mkdocs/img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
+<!-- <br />
+![No need to sew together](mkdocs/img/promo-images/Carburetor_Nosew.jpg) -->
+
+---
+
+## Support & Storefronts
+
+Enjoying the Zen BBQ experience? Stay connected or get support via our official channels:
+
+[![Gumroad](mkdocs/img/icons/services/gumroad-16.png) **Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq) | [![BlenderMarket](mkdocs/img/icons/services/superhive-16.png) **BlenderMarket**](https://blendermarket.com/products/zen-bbq) | [![Discord](mkdocs/img/icons/services/discord-16.png) **Discord**](https://discord.gg/wGpFeME)

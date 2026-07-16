@@ -43,7 +43,7 @@ Toggles the Render Preview mode, see [**Quick Start Guide**](quickstart.md#previ
 
 ### Smart Select | Reset Selection
 
-* **Just click:** Executes **Smart Select** (see [**Quick Start Guide**](quickstart.md#smart-select-with-pie-menu)).
+* **Just click:** Executes **Smart Select** (see [**Quick Start Guide**](quickstart.md#smart-select)).
 * **Ctrl + click:** Executes **Reset Selection** (same as in the [**N-Panel**](subpanel_bevels.md/#tools-block)).
 
 ### Colored Squares

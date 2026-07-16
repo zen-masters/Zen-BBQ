@@ -133,7 +133,7 @@ Almost every map subpanel shares these two powerful workflow settings:
 
 ### 4. Material ID
 
-| ![Generate BBQ Material ID](gen_mat_id_op_prop.png) |
+| ![Generate BBQ Material ID](img/bbq-screens/npanel/gen_mat_id_op_prop.png) |
 |:---:|
 | *Fig. 6. Generate BBQ Material ID operator properties.* |
 

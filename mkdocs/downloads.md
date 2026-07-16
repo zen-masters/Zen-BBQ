@@ -1,8 +1,8 @@
 ---
 title: "Downloads & Stores"
-description: "Links to official Zen BBQ stores on Gumroad and BlenderMarket."
+description: "Links to official Zen BBQ stores on Gumroad and Superhive."
 category: "Downloads"
-tags: [zen-bbq, blender, download, gumroad, blendermarket]
+tags: [zen-bbq, blender, download, gumroad, Superhive]
 related_files: [index.md, installation.md]
 ---
 
@@ -11,5 +11,5 @@ related_files: [index.md, installation.md]
 
 ![Gumroad](img/icons/services/gumroad-16.png) [**Gumroad**](https://sergeytyapkin.gumroad.com/l/zenbbq)
 
-![BlenderMarket](img/icons/services/blendermarket-16.png) [**BlenderMarket**](https://www.blendermarket.com/products/zen-bbq)
+![Superhive](img/icons/services/superhive-16.png) [**Superhive**](https://superhivemarket.com/products/zen-bbq)
 
