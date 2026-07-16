@@ -8,6 +8,10 @@ related_files: [subpanel_bevels.md, subpanel_preferences.md]
 
 # Live Boolean Integration
 
+| ![Live Boolean Preview](img/bbq-screens/liveboolean/live-boolean-preview.gif) |
+|:---:|
+| *Fig. 1. Live Boolean Preview.* |
+
 The **Live Boolean** integration in Zen BBQ ensures a seamless, non-destructive modeling workflow when combining Blender's native Boolean modifiers with procedural bevels. 
 
 When you perform boolean cuts, Blender dynamically generates new intersection edges. Without proper integration, these new edges lack bevel weight and break the visual continuity of your model. Zen BBQ solves this by automatically managing the bevel weights on dynamically created geometry.

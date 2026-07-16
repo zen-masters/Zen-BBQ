@@ -91,6 +91,16 @@ related_files: [index.md, piemenu.md, subpanel_bevels.md]
 |:---:|
 | *Fig. 6. Select by Preset* |
 
+### Live Boolean Workflow
+
+Zen BBQ features seamless integration with Blender’s native Boolean modifiers, allowing you to automatically apply procedural bevels to dynamically generated intersection edges without destructive geometry editing.
+
+1. **Set Default Radius:** In the **Zen BBQ** panel, define your fallback bevel size using the **Set Default Radius** option. This radius is automatically applied to any new boolean cuts.
+2. **Apply Boolean:** Cut, union, or intersect your mesh using Blender's Boolean modifier (or helper addons like BoxCutter / HardOps).
+3. **See the Result:** Zen BBQ will detect the newly created intersection edges on the fly and immediately assign the specified default bevel radius to them.
+
+> 🔗 **Learn More:** For advanced configurations and a detailed breakdown of the non-destructive modeling pipeline, check out our full [Live Boolean Integration](live_boolean.md) guide.
+
 ## Baking
 
 * Select your mesh object.
