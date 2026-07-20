@@ -2,13 +2,8 @@
 
 ## Bevels
 
-### Generator
-Scene to test all basic operators. 
-
-[//]: # (https://github.com/zen-masters/Zen-UV/raw/master/examples/ZenUV_Generator_01.zip)
-
 ### Coffee Machine
-Scene to test all basic operators. 
+Scene with demo bevels. 
 
 [//]: # (https://github.com/zen-masters/Zen-BBQ/raw/main/examples/ZenBBQ_CoffeeMachine.zip)
 
@@ -18,3 +13,10 @@ Scene to test all basic operators.
 Demonstration of Live Boolean usage.
 
 [//]: # (https://github.com/zen-masters/Zen-BBQ/raw/main/examples/ZenBBQ_Carburetor.zip)
+
+## Misc
+
+### Generator
+Scene to test all basic operators. 
+
+[//]: # (https://github.com/zen-masters/Zen-UV/raw/master/examples/ZenUV_Generator_01.zip)
