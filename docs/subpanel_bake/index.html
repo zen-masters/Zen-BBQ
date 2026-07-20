@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Bake - Zen BBQ 2.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Bake";
+        var mkdocs_page_input_path = "subpanel_bake.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen BBQ 2.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Features</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../main_panel/">Main Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bevels/">Bevels</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Bake</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-target-object-selection-mode">1. Target &amp; Object Selection Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-object-monitor-error-diagnostics-log">2. Object Monitor &amp; Error Diagnostics Log</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#diagnostic-features-error-tracking">Diagnostic Features &amp; Error Tracking</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returning-to-workflow">Returning to Workflow</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-bake-controls-engine-configuration">2. Bake Controls &amp; Engine Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-bake-render-presets-sampling">3. Bake Render Presets &amp; Sampling</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-output-file-naming-templates">Bake Output &amp; File Naming Templates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-maps-settings-per-map-configuration">Bake Maps Settings (Per-Map Configuration)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common-parameters">Common Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#map-specific-settings">Map-Specific Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-normal">1. Normal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-ambient-occlusion-curvature-convexity-concavity">2. Ambient Occlusion / Curvature / Convexity / Concavity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-bevels-mask-parts-id-object-space-normal">3. Bevels Mask &amp; Parts ID &amp; Object Space Normal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-material-id">4. Material ID</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-misc-performance-verification-settings">Bake Misc (Performance &amp; Verification Settings)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#performance-workflow-impact">Performance &amp; Workflow Impact</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_help/">Help</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../live_boolean/">Live Boolean</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../manual_normal_map_baking/">Manual Normal Map Baking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../marmoset-integration/">Marmoset Toolbag Integration</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Changelog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_2.0.0/">Version 2.0.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.2.0/">Version 1.2.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.1.0/">Version 1.1.0</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen BBQ 2.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core Features</li>
+      <li class="breadcrumb-item active">Bake</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="bake-panel">Bake Panel</h1>
+<p>The <strong>Bake</strong> subpanel provides a complete, streamlined environment for configuring and baking texture maps (such as Normal, AO, and Curvature) directly inside Blender. It integrates object management, rendering engine settings, quality presets, and file output path templates into a single vertical layout.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bake Panel" src="../img/bbq-screens/npanel/bake-panel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Overview of the Bake panel and its target management systems.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-target-object-selection-mode">1. Target &amp; Object Selection Mode</h2>
+<p>At the very top, you control exactly which objects and materials are queued for the baking process:</p>
+<ul>
+<li><strong>Selected vs. Collection:</strong> * <code>Selected</code> (Default): Bakes maps only for the objects currently selected in the viewport.<ul>
+<li><code>Collection</code>: Bakes all objects contained within a designated Blender Collection.</li>
+</ul>
+</li>
+<li><strong>The Pin Button (Freeze Selection):</strong> Located next to the Selection mode switch, this button locks the current target group. Once <strong>Pinned</strong>, Zen BBQ stops tracking viewport selection changes entirely. The system freezes the current list of objects inside the monitor, ensuring you don&rsquo;t accidentally drop your bake queue by clicking empty space in the viewport.</li>
+<li><strong>Active Material vs. All Materials:</strong><ul>
+<li><code>Active Material</code>: Bakes maps only for the material currently active on the object.</li>
+<li><code>All Materials</code>: Batch-bakes every material slot assigned across the target geometry.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="2-object-monitor-error-diagnostics-log">2. Object Monitor &amp; Error Diagnostics Log</h2>
+<p>The <strong>Object Monitor</strong> serves as both your pre-bake checklist and a post-bake diagnostic logging center. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bake Workflow Error Example" src="../img/bbq-screens/npanel/bake-failed-log.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 2. The Object Monitor in Log Display mode showing a critical UV error and the execution report.</em></td>
+</tr>
+</tbody>
+</table>
+<p>During the bake configuration, it simply displays a clean list of targeted objects (e.g., <code>Zen_Carburetor</code>). However, once the baking process finishes or encounters an issue, the monitor automatically switches into <strong>Log Display Mode</strong>:</p>
+<h3 id="diagnostic-features-error-tracking">Diagnostic Features &amp; Error Tracking</h3>
+<ul>
+<li><strong>Visual Status Reports:</strong> Each object row updates with a status tag (e.g., <code>Failed</code>), the exact calculation time (<code>00:00.169</code>), and a short error summary (<code>No UVs</code>).</li>
+<li><strong>Detailed Error Notice:</strong> Underneath the control buttons, a dedicated warning section prints the specific reason for the failure (e.g., <code>Zen_Carburetor - does not have UV Maps!</code>). </li>
+<li><strong>Target Selector (Arrow icon):</strong> A convenient navigation arrow appears on the far right of the object&rsquo;s row. Clicking it immediately selects that specific object in the Blender scene so you can fix the issue without searching for it manually.</li>
+</ul>
+<p>To keep the UI clean, Zen BBQ evaluates and displays <strong>only one critical error per object at a time</strong>. The engine actively monitors the following pipeline requirements:</p>
+<ol>
+<li><strong>Bevel Data Check:</strong> Verifies if custom bevel data or weights are actually assigned to the object.</li>
+<li><strong>Active UV Map:</strong> Checks if the target object has a valid, active UV layout.</li>
+<li><strong>Flipped UV Islands:</strong> Detects if any UV islands are flipped (have inverted normals/face orientation), which would cause inverted baking results.</li>
+<li><strong>UV Overlaps:</strong> Scans for overlapping islands that might cause texture blending artifacts during the baking process.</li>
+</ol>
+<h3 id="returning-to-workflow">Returning to Workflow</h3>
+<ul>
+<li><strong>Resume Monitoring Button:</strong> When the system is in Log Display Mode, the monitoring engine pauses. Click the <strong>Resume Monitoring</strong> button at the bottom to clear the diagnostic log, exit the error report, and return to live tracking of your viewport selection.</li>
+</ul>
+<hr />
+<h2 id="2-bake-controls-engine-configuration">2. Bake Controls &amp; Engine Configuration</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bake Controls &amp; Engine Configuration" src="../img/bbq-screens/npanel/bake-controls-and-engine-configuration.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 3. Bake Controls &amp; Engine Configuration.</em></td>
+</tr>
+</tbody>
+</table>
+<p>Directly beneath the object monitor lies the execution center:</p>
+<ul>
+<li><strong>Process Control:</strong> Features <code>Start</code>, <code>Pause</code>, and <code>Cancel</code> buttons to manage active baking processes in real-time.</li>
+<li><strong>Bake Render Target:</strong> Toggles between <code>GPU Compute</code> and <code>CPU</code>. It is highly recommended to use GPU Compute for faster processing if your hardware supports it.</li>
+<li><strong>Resolution Control:</strong> Sets the horizontal and vertical resolution of the output texture maps (e.g., <code>1024 px</code>). The <strong>Lock</strong> icon ensures that width and height remain perfectly square (1:1 ratio) when adjusting sizes.</li>
+</ul>
+<hr />
+<h2 id="3-bake-render-presets-sampling">3. Bake Render Presets &amp; Sampling</h2>
+<p>Similar to the <a href="../subpanel_bevels/#shader-render-presets">viewport engine</a>, Zen BBQ provides specialized quality profiles specifically tuned for baking. These profiles dictate the Cycles render sampling settings and <strong>directly determine the final texture crispness</strong>:</p>
+<ul>
+<li><strong>Low / Med / High Toggles:</strong> Quickly swaps core parameters based on whether you need a fast test bake or production-ready maps.</li>
+<li><strong>Preset Properties (AO &amp; Bevel Node Samples):</strong> Sets the physical render sample rates inside the shader networks to ensure transitions look perfectly smooth without grain.</li>
+<li><strong>Cycles Viewport/Render Sampling integration:</strong> Exposes the underlying <code>Noise Threshold</code>, <code>Max Samples</code>, <code>Min Samples</code>, and <code>Time Limit</code> bounds so you can balance bake times and noise suppression perfectly.</li>
+</ul>
+<hr />
+<h2 id="bake-output-file-naming-templates">Bake Output &amp; File Naming Templates</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bake Output &amp; File Naming Templates" src="../img/bbq-screens/npanel/bake-output-file-naming-templates.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 4. Bake Output &amp; File Naming Templates.</em></td>
+</tr>
+</tbody>
+</table>
+<p>This block automates the saving of textures and matches them to your asset naming conventions:</p>
+<ul>
+<li><strong>Merged Checkbox:</strong> When enabled, this option combines and bakes maps from <strong>multiple selected objects into a single, shared texture map</strong>. <ul>
+<li>⚠️ <strong>Critical Requirement:</strong> For this mode to work correctly, the UV maps of all included objects must be unwrapped and packed together into the same UV space layout (without overlapping each other) so their textures don&rsquo;t overwrite one another.</li>
+</ul>
+</li>
+<li><strong>Dir Name (<code>//</code>):</strong> Sets the destination folder path. By default, it uses Blender&rsquo;s relative path format (<code>//</code>), saving images next to your project <code>.blend</code> file. Clicking the folder icon lets you set a custom path.</li>
+<li><strong>Naming Tokens (Individual / Merged):</strong> Uses dynamic string variables to auto-generate clean filenames.<ul>
+<li><code>%OBJECT%_%SUFFIX%.png</code>: Translates automatically to the object&rsquo;s name combined with the individual <strong>Image Suffix</strong> defined inside that specific map&rsquo;s subpanel (e.g., <code>Zen_Carburetor_Normal.png</code> or <code>Zen_Carburetor_AO.png</code>).</li>
+</ul>
+</li>
+<li><strong>Evaluated Paths:</strong> Underneath the templates, Zen BBQ shows a live preview of the real system path and exact file names that will be generated. This eliminates guesswork entirely.</li>
+</ul>
+<hr />
+<h2 id="bake-maps-settings-per-map-configuration">Bake Maps Settings (Per-Map Configuration)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bake Maps Settings" src="../img/bbq-screens/npanel/bake-maps-settings.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 5. Bake Maps Settings.</em></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Bake Maps</strong> section allows you to activate specific bake layers via the <strong>Enabled</strong> checkbox on the right side of each row. Expanding a map type dropdown reveals advanced options specific to that layer.</p>
+<h3 id="common-parameters">Common Parameters</h3>
+<p>Almost every map subpanel shares these two powerful workflow settings:
+* <strong>Add Image Node To Material:</strong> When enabled, the addon automatically injects a standard <code>Image Texture</code> node containing the freshly baked map into the object&rsquo;s material node tree. It is placed directly to the right of the <code>Shader Output</code> node, leaving it completely up to the user how to route and utilize the baked texture.
+* <strong>Override Bake Image Size:</strong> Allows you to override the global resolution (set in the main Bake panel) for this specific map type. When checked, you can manually set a custom resolution (e.g., baking a 4K Normal Map while keeping auxiliary masks at 1024px).</p>
+<hr />
+<h3 id="map-specific-settings">Map-Specific Settings</h3>
+<h3 id="1-normal">1. Normal</h3>
+<ul>
+<li><strong>Image Suffix:</strong> The text appended to the filename when using the <code>%SUFFIX%</code> token (Default: <code>Normal</code>).</li>
+<li><strong>Normal Map Convention (OpenGL / DirectX):</strong> Controls the direction of the green channel ($Y$-axis). Swapping between conventions instantly inverts the channel to ensure compatibility with your target game engine (e.g., Unreal Engine or Unity).</li>
+</ul>
+<h3 id="2-ambient-occlusion-curvature-convexity-concavity">2. Ambient Occlusion / Curvature / Convexity / Concavity</h3>
+<ul>
+<li><strong>AO / Cavity Distance:</strong> Defines the maximum ray-cast distance used to calculate the specific surface details or shadow occlusions.</li>
+<li><strong>Disable Explode in Renders:</strong> Zen BBQ includes a procedural <code>Explode</code> modifier (accessible via the Tools panel) to separate intersecting meshes and avoid dark projection artifacts during baking. Checking this box temporarily disables the Explode modifier during the render calculation for these specific maps if your workflow requires it.</li>
+</ul>
+<h3 id="3-bevels-mask-parts-id-object-space-normal">3. Bevels Mask &amp; Parts ID &amp; Object Space Normal</h3>
+<ul>
+<li>Provides standard options to customize the <strong>Image Suffix</strong>, override sizes, and automatically add the baked node back into the material tree.</li>
+</ul>
+<h3 id="4-material-id">4. Material ID</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Generate BBQ Material ID" src="../img/bbq-screens/npanel/gen_mat_id_op_prop.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 6. Generate BBQ Material ID operator properties.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Generate BBQ Material ID:</strong> (See <strong>Fig. 5</strong> above) Automatically generates random, highly distinct viewport colors for all materials assigned to the selected objects. </li>
+<li><strong>Why this is needed:</strong> By default, Blender assigns a flat gray color to the <code>Viewport Display -&gt; Color</code> property of new materials. Since Zen BBQ utilizes these exact viewport colors to generate and bake the Material ID pass, having multiple identical gray materials will result in a broken, merged ID map.</li>
+<li><strong>Smart Filtering:</strong> The operator is non-destructive—it targets and replaces only the default, unedited gray colors, fully preserving any custom viewport colors you have already manually configured.</li>
+</ul>
+<h2 id="bake-misc-performance-verification-settings">Bake Misc (Performance &amp; Verification Settings)</h2>
+<p>At the very bottom of the Bake interface, you will find the <strong>Bake Misc</strong> subpanel. This panel contains global toggles for the automatic geometry and UV diagnostics.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bake Misc Panel" src="../img/bbq-screens/npanel/bake-misc.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 7. Global diagnostic toggles under the Bake Misc panel.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Check Flipped UVs</strong> (Checked by default)</li>
+<li><strong>Check Overlapped UVs</strong> (Checked by default)</li>
+</ul>
+<h3 id="performance-workflow-impact">Performance &amp; Workflow Impact</h3>
+<ul>
+<li><strong>Why turn them off?</strong> Scanning complex meshes with massive polycounts or dense UV sets for overlapping or flipped islands can introduce a slight computational overhead. If you are confident in your UV layout and want to squeeze out maximum baking performance, you can optionally uncheck these options to speed up the pre-bake pipeline initialization.</li>
+<li><strong>Non-Blocking Warnings:</strong> It is important to note that <strong>these checks never halt or interrupt the baking process</strong>. If Zen BBQ detects flipped or overlapping UVs while these options are active, it will continue baking your maps uninterrupted. The errors will simply be printed as non-blocking diagnostic warnings in the <strong>Object Monitor Log</strong> upon completion, allowing you to review the quality report post-render.</li>
+</ul>
+<hr />
+<p><a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><img alt="Gumroad" src="../img/icons/services/gumroad-16.png" /> <strong>Gumroad</strong></a> | <a href="https://blendermarket.com/products/zen-bbq"><img alt="Superhive" src="../img/icons/services/superhive-16.png" /> <strong>Superhive</strong></a> | <a href="https://discord.gg/wGpFeME"><img alt="Discord" src="../img/icons/services/discord-16.png" /> <strong>Discord</strong></a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../subpanel_bevels/" class="btn btn-neutral float-left" title="Bevels"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../subpanel_tools/" class="btn btn-neutral float-right" title="Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../subpanel_bevels/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../subpanel_tools/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

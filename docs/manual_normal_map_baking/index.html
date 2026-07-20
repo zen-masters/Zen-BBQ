@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Manual Normal Map Baking - Zen BBQ 2.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Manual Normal Map Baking";
+        var mkdocs_page_input_path = "manual_normal_map_baking.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen BBQ 2.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Features</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_panel/">Main Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bevels/">Bevels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bake/">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_help/">Help</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../live_boolean/">Live Boolean</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Manual Normal Map Baking</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-prepare-uvs">1. Prepare UVs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-setup-the-target-image-node">2. Setup the Target Image Node</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-blender-baking-settings">3. Blender Baking Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-execute-bake">4. Execute Bake</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-verify-the-shading-results">5. Verify the Shading Results</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-exporting-the-normal-map">6. Exporting the Normal Map</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../marmoset-integration/">Marmoset Toolbag Integration</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Changelog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_2.0.0/">Version 2.0.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.2.0/">Version 1.2.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.1.0/">Version 1.1.0</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen BBQ 2.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutorials</li>
+      <li class="breadcrumb-item active">Manual Normal Map Baking</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="manual-normal-map-baking-guide">Manual Normal Map Baking Guide</h1>
+<p>While Zen BBQ features a fully automated <a href="../subpanel_bake/">Bake Panel</a> for one-click texture generation, understanding how to bake normal maps manually using Blender&rsquo;s native Cycles engine is highly valuable. This guide walks you through the step-by-step manual baking pipeline for Zen BBQ bevels.</p>
+<hr />
+<h2 id="1-prepare-uvs">1. Prepare UVs</h2>
+<p>Before baking, ensure your target mesh has a clean, bake-ready UV layout. While this guide assumes basic UV mapping knowledge, keep these key hard-surface rules in mind:</p>
+<ul>
+<li><strong>UV Island Margins:</strong> Ensure there is sufficient padding (margin) between UV shells to prevent edge-bleeding artifacts.</li>
+<li><strong>Hard Edges Separation:</strong> Any geometric hard/sharp edge <strong>must</strong> be split into separate UV islands to avoid nasty shading seams on your normal map.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Prepared UV Layout" src="../img/bake-tutor-1/uvs-prepared.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. A clean hard-surface UV layout with adequate padding and split hard edges.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-setup-the-target-image-node">2. Setup the Target Image Node</h2>
+<ol>
+<li>Select your object and open the <strong>Shader Editor</strong>.</li>
+<li>Add a new Image Texture node by pressing <code>Shift + A</code> and selecting <strong>Texture ➔ Image Texture</strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Add Image Texture Node" src="../img/bake-tutor-1/shader-add-image-node.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 2. Creating a new Image Texture node in the Shader Editor.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Click the <strong>New</strong> button inside the image node to create a blank canvas.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="New Image Button" src="../img/bake-tutor-1/image-new.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 3. Initializing a new texture inside the node.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Configure the texture settings in the pop-up dialog:<ul>
+<li><strong>Name:</strong> Give your texture a clear name (e.g., <code>MyBakedNormal</code>).</li>
+<li><strong>Width &amp; Height:</strong> Choose your resolution (typically <code>2048 x 2048</code> or <code>4096 x 4096</code>).</li>
+<li><strong>Alpha:</strong> Uncheck this option, as alpha channels are not utilized for standard tangent-space normal maps.</li>
+<li>Click <strong>OK</strong>.</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Image Settings Dialog" src="../img/bake-tutor-1/image-settings.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 4. Setting resolution and disabling Alpha.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>Crucial Step:</strong> Change the <strong>Color Space</strong> dropdown on the node from <em>sRGB</em> to <strong>Non-Color</strong>. If this is missed, Blender will apply a gamma curve, distorting your normal map vectors completely.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Color Space Selection" src="../img/bake-tutor-1/image-non-color.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 5. Switching Color Space to Non-Color.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Leave this node floating in your shader graph. <strong>Do not connect it to any input</strong>. Simply keep it selected (highlighted with a white outline) so Blender knows this is the active baking target.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Final Shader Graph Node" src="../img/bake-tutor-1/image-final-shader.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 6. The active, unconnected target image node inside the material graph.</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Previewing the Bevels</p>
+<p>To visualize and bake the procedural bevels correctly, ensure you have enabled the preview in the Zen BBQ N-Panel. Go to the <strong>Bevels</strong> panel and switch the preview mode to <strong>Shader</strong> (this temporarily overrides the material with the viewport bevel shader).</p>
+</div>
+<hr />
+<h2 id="3-blender-baking-settings">3. Blender Baking Settings</h2>
+<ol>
+<li>Make sure your active rendering engine in the <strong>Blender Render Properties</strong> tab is set to <strong>Cycles</strong> (baking is not supported in Eevee).</li>
+<li>To ensure high-quality normal map generation, open the Zen BBQ <strong>Bake</strong> panel, find <strong>Bake Render Presets</strong>, and select the <strong>High</strong> preset.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bake High Preset" src="../img/bake-tutor-1/npanel-high.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 7. Setting the Bake Render Preset to High in the Zen BBQ panel.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Scroll down to the <strong>Bake</strong> accordion in the native <strong>Render Properties</strong> tab and configure as follows:<ul>
+<li><strong>Bake Type:</strong> <code>Normal</code></li>
+<li><strong>Selected to Active:</strong> <code>Off</code> (since we are baking procedural bevels directly onto the same low-poly mesh).</li>
+<li><strong>Margin Type:</strong> <code>Extend</code> (or set a custom margin size in pixels to match your padding).</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Blender Native Bake Settings" src="../img/bake-tutor-1/bake-settings.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 8. Native Blender Cycles baking configuration.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Under the Cycles <strong>Render</strong> settings, we recommend setting a <strong>Time Limit</strong> (e.g., 5 to 15 minutes) under the Noise Threshold options. The longer you allow the engine to render, the cleaner and more noise-free your final normal map will be.</li>
+</ol>
+<hr />
+<h2 id="4-execute-bake">4. Execute Bake</h2>
+<p>Once everything is configured and your target image node is highlighted in the Shader Editor, scroll down to the bottom of the <strong>Bake</strong> accordion and click <strong>Bake</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Start Bake Button" src="../img/bake-tutor-1/bake-start.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 9. Triggering the native Blender baking process.</em></td>
+</tr>
+</tbody>
+</table>
+<p>A progress bar will appear at the bottom of the Blender window. Wait until the process reaches 100%.</p>
+<hr />
+<h2 id="5-verify-the-shading-results">5. Verify the Shading Results</h2>
+<p>Once baking is complete, let&rsquo;s plug the new map into the material to verify the visual result.</p>
+<ol>
+<li>In the Zen BBQ <strong>Bevels</strong> panel, switch the preview mode from <em>Shader</em> back to <strong>Material</strong> to restore your original shader setup.</li>
+<li>Press <code>Shift + A</code> and add a <strong>Vector ➔ Normal Map</strong> node.</li>
+<li>Connect the nodes as follows:<ul>
+<li>Connect the <strong>Color</strong> output of your <em>Image Texture</em> node to the <strong>Color</strong> input of the <em>Normal Map</em> node.</li>
+<li>Connect the <strong>Normal</strong> output of the <em>Normal Map</em> node to the <strong>Normal</strong> input of your material&rsquo;s <em>Principled BSDF</em>.</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Connecting Baked Normal Map" src="../img/bake-tutor-1/connect-nodes.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 10. Connecting the baked normal map texture to the Principled BSDF.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Adjust your material settings to evaluate the highlights (e.g., set a dark grey <strong>Base Color</strong>, increase <strong>Metallic</strong> to <code>1.0</code>, and lower <strong>Roughness</strong> to <code>0.2</code>).</li>
+<li>You can now safely switch your render engine to <strong>Eevee</strong> to inspect the real-time viewport response.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Final Viewport Shading Result" src="../img/bake-tutor-1/eevee.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 11. Clean, procedurally generated bevel highlights rendering in real-time via Eevee.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-exporting-the-normal-map">6. Exporting the Normal Map</h2>
+<p>Blender does not automatically save baked images to your hard drive. If you close the blend file now, your baked data will be lost.</p>
+<ol>
+<li>Switch one of your workspace editors to the <strong>Image Editor</strong>.</li>
+<li>Click the image selector dropdown at the top and select your baked normal map (e.g., <code>MyBakedNormal</code>).</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Selecting Baked Image" src="../img/bake-tutor-1/image-editor-choose.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 12. Locating your baked normal map in the Image Editor.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Go to <strong>Image ➔ Save As&hellip;</strong> in the top header and save your file to your project directory (typically as a 16-bit PNG or Targa).</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Saving Baked Normal Map" src="../img/bake-tutor-1/image-editor-save-as.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 13. Exporting the final map for use in external game engines or renderers.</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Final Saved Map" src="../img/bake-tutor-1/MyBakedNormal.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 14. The final exported tangent-space normal map.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><img alt="Gumroad" src="../img/icons/services/gumroad-16.png" /> <strong>Gumroad</strong></a> | <a href="https://blendermarket.com/products/zen-bbq"><img alt="Superhive" src="../img/icons/services/superhive-16.png" /> <strong>Superhive</strong></a> | <a href="https://discord.gg/wGpFeME"><img alt="Discord" src="../img/icons/services/discord-16.png" /> <strong>Discord</strong></a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../downloads/" class="btn btn-neutral float-left" title="Downloads"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../marmoset-integration/" class="btn btn-neutral float-right" title="Marmoset Toolbag Integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../downloads/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../marmoset-integration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

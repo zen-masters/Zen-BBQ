@@ -3,11 +3,13 @@ title: "Release Changelog"
 description: "Summary of updates, new features, and bug fixes for the Zen BBQ addon."
 category: "Changelog"
 tags: [zen-bbq, blender, updates, changelog, releases]
-related_files: [changelog/release_note_1.2.0.md, changelog/release_note_1.1.0.md]
+related_files: [changelog/release_note_2.0.0.md, changelog/release_note_1.2.0.md, changelog/release_note_1.1.0.md]
 ---
 
 # Changelog
 ---
+- [Version 2.0.0](changelog/release_note_2.0.0.md) *Jul 20, 2026*
+
 - [Version 1.2.0](changelog/release_note_1.2.0.md) *Sep 2, 2025*
 
 - [Version 1.1.0](changelog/release_note_1.1.0.md) *Aug 6, 2025*

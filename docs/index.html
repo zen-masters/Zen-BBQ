@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Zen BBQ 1.2 for Blender Documentation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Zen BBQ 2.0 for Blender Documentation" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Zen BBQ 1.2 for Blender</title>
+    <title>Zen BBQ 2.0 for Blender</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="extra.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -30,7 +31,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> Zen BBQ 1.2 for Blender
+          <a href="." class="icon icon-home"> Zen BBQ 2.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,15 +43,25 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a>
+    <li class="toctree-l2"><a class="reference internal" href="#core-concepts-advantages">Core Concepts &amp; Advantages</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    <li class="toctree-l2"><a class="reference internal" href="#application-areas">Application Areas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-system-features">Key System Features</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#application-area">Application area</a>
+    <li class="toctree-l3"><a class="reference internal" href="#1-bevel-management">1. Bevel Management</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    <li class="toctree-l3"><a class="reference internal" href="#2-viewport-display-engine">2. Viewport Display Engine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-advanced-baking-pipeline">3. Advanced Baking Pipeline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-workflow-utilities-tools">4. Workflow Utilities (Tools)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-zen-multi-panel-ui">5. Zen Multi-Panel UI</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-navigation">Quick Navigation</a>
     </li>
     </ul>
                 </li>
@@ -63,25 +74,39 @@
                 <li class="toctree-l1"><a class="reference internal" href="quickstart/">Quick Start</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Core Features</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="npanel/">N-Panel</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="main_panel/">Main Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="subpanel_bevels/">Bevels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="subpanel_bake/">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="subpanel_tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="subpanel_preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="subpanel_help/">Help</a>
+                  </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="piemenu/">Pie Menu</a>
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="live_boolean/">Live Boolean</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="downloads/">Downloads</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="bake-tutor-1/">How to Bake Normal Map</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="guide_using_vc_mask/">How to use vertex color mask</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="manual_normal_map_baking/">Manual Normal Map Baking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="marmoset-integration/">Marmoset Toolbag Integration</a>
+                  </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="troubleshooting/">Troubleshooting</a>
@@ -90,6 +115,8 @@
               <p class="caption"><span class="caption-text">Changelog</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="changelog/release_note_2.0.0/">Version 2.0.0</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="changelog/release_note_1.2.0/">Version 1.2.0</a>
                   </li>
@@ -103,7 +130,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">Zen BBQ 1.2 for Blender</a>
+          <a href=".">Zen BBQ 2.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -119,54 +146,72 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="zen-bbq-12-for-blender">Zen BBQ 1.2 for Blender</h1>
+                <h1 id="zen-bbq-20-for-blender">Zen BBQ 2.0 for Blender</h1>
 <p><img alt="I stand with Ukraine" src="img/I_stand_with_Ukraine_banner.svg" /></p>
-<h2 id="quick-start">Quick Start</h2>
-<ul>
-<li><a href="installation/"><strong>Installation</strong></a></li>
-<li><a href="quickstart/"><strong>Quick Start Guide</strong></a></li>
-<li><a href="bake-tutor-1/"><strong>Quick Guide How to Bake Normal Map</strong></a></li>
-</ul>
+<p><strong>Zen BBQ</strong> (Build Bevels Quickly) is a professional toolset for Blender designed to create, adjust, visualize, and <strong>bake</strong> bevels in a fully non-destructive manner. By leveraging the power of the <strong>Cycles Bevel Shader</strong>, the addon allows you to achieve realistic rounded edges without complex topology preparation, and then seamlessly bake them into production-ready texture maps.</p>
 <p><img alt="Intro Zen BBQ" src="img/IntroBBQ.png" /></p>
-<!-- blank line -->
-<!-- <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe width="1018" height="573" src="https://www.youtube.com/embed/iI1JWrOn2ys" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
-</div> -->
-<!-- blank line -->
-
-<h2 id="introduction">Introduction</h2>
-<p>Zen BBQ is an add-on for creating, adjusting and visualizing Bevels in a couple of clicks! Are you tired of preparing geometry for the Subd or Bevel modifiers? Look no further! </p>
-<h3 id="application-area">Application area</h3>
+<h2 id="core-concepts-advantages">Core Concepts &amp; Advantages</h2>
+<p>Traditional workflows require significant time to maintain clean high-poly topology for Subdiv or Bevel modifiers. Zen BBQ redefines this approach through two main pillars:</p>
 <ul>
-<li><strong>Visualization</strong>. Bevels catch light and help the eye to define object shapes better. Make your models more realistic and appealing without changing geometry!</li>
-<li><strong>Concept Art</strong>. Design awesome objects easily! Just stick Mesh Elements into each other, get smooth transitions and create cool shapes. Special thanks to Tor Frick!</li>
-<li><strong>Game Development</strong>. Don&rsquo;t forget that BBQ Bevels can be baked into Normal Maps for GameDev models. Save hours of your time without cutting support loops for your High-poly model!</li>
+<li><strong>Non-Destructive Beveling</strong>: Bevels are generated at the shader level. Your base geometry remains simple, lightweight, and easy to edit.</li>
+<li><strong>Integrated Baking Pipeline</strong>: Procedural bevels are not locked inside Blender. With the built-in baking tools, these shader-based effects can be instantly baked directly into standard Tangent-space Normal, Curvature, or AO maps, making the asset ready for game engines or external texturing suites.</li>
+<li><strong>Speed and Iteration</strong>: Adjusting bevel radii happens instantly for the entire object or specific selected elements.</li>
+<li><strong>Visual Precision</strong>: Support for real-world measurement units (mm, cm, m, in, ft) ensures the accuracy required for industrial design and architectural visualization.</li>
 </ul>
-<h3 id="main-features">Main Features</h3>
+<h2 id="application-areas">Application Areas</h2>
 <ul>
-<li><strong>Full control over Bevel Shader Node</strong> in Cycles. Set Values for the entire model or for each Edge and Vertex individually.</li>
-<li><strong>The whole range of Measurement Units</strong>. Set Bevel Radius in MM, CM, M, KM, IN, FT etc.</li>
-<li><strong>Custom Preset Groups</strong>. Use existing Bevel Preset Groups with different Units or create your own.</li>
-<li><strong>Friendly to your Materials</strong>. Zen BBQ stores its Values in the mesh attributes and embeds into your Materials in a non-destructive way.</li>
-<li><strong>Smart Render Preview System</strong>. Preview Bevels in one click!</li>
-<li><strong>Viewport Display</strong> System. Visually control each Bevel Preset by color in Viewport.</li>
-<li><strong>Intuitive UI</strong> with multifunctional Main and Pie menus.</li>
-<li><strong>Quick Support</strong> on the Discord channel.</li>
+<li><strong>Concept Art &amp; Design</strong>: Effortlessly create complex shapes by intersecting meshes (Boolean-based workflow) and getting smooth transitions. (Special thanks to Tor Frick for popularizing this technique).</li>
+<li><strong>Game Development (High-poly to Low-poly workflow)</strong>: Use Zen BBQ to prepare High-poly models. Procedural bevels bake perfectly into texture maps, saving hours of modeling time on support loops and mesh sewing.</li>
+<li><strong>Visualization</strong>: Add realistic highlights to sharp edges, which is critical for the human eye to perceive object forms correctly.</li>
 </ul>
-<p><strong>Zen BBQ - Build Bevels Quickly!</strong></p>
-<p><img alt="Same Lowpoly Geometry" src="img/promo-images/Carburetor_Before_After.jpg" />
-<br /></p>
-<!--![No need to sew together](img/promo-images/Carburetor_Nosew.jpg)
-<br /><br />-->
-<p><img alt="Adjustable Bevel Radius" src="img/promo-images/Carburetor_Controllable_Radii.jpg" />
-<br /><br />
-<img alt="Colorized Edge Display" src="img/promo-images/Carburetor_Colorized_Display.jpg" />
-<br /><br />
-<img alt="Example" src="img/promo-images/vertex-example.gif" />
-<br />
-<br />
-<strong>Enjoy this experience with us!</strong></p>
-<p><img alt="Gumroad" src="img/icons/services/gumroad-16.png" /> <a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><strong>Gumroad</strong></a> | <img alt="BlenderMarket" src="img/icons/services/blendermarket-16.png" /> <a href="https://www.blendermarket.com/products/zen-bbq"><strong>BlenderMarket</strong></a> | <img alt="Discord" src="img/icons/services/discord-16.png" /> <a href="https://discord.gg/wGpFeME"><strong>Discord</strong></a></p>
+<hr />
+<h2 id="key-system-features">Key System Features</h2>
+<h3 id="1-bevel-management">1. Bevel Management</h3>
+<p>A centralized preset system provides flexible radius control.</p>
+<ul>
+<li><strong>Preset Groups</strong>: Organize sets of bevel values with different measurement units.</li>
+<li><strong>Color-Coded Overlay</strong>: Each preset corresponds to a unique viewport color for instant visual diagnostics.</li>
+<li><strong>Edge &amp; Vertex Attributes</strong>: Bevel data is stored directly in mesh attributes, allowing for non-uniform, per-element width control.</li>
+</ul>
+<p>👉 <a href="subpanel_bevels/"><strong>Learn more about Bevels Subpanel</strong></a></p>
+<h3 id="2-viewport-display-engine">2. Viewport Display Engine</h3>
+<p>A powerful visualization toolset for cycling through different preview modes:</p>
+<ul>
+<li><strong>Material Mode</strong>: Displays your original, unaltered user materials.</li>
+<li><strong>Shader Mode</strong>: Real-time visualization of procedural bevels and diagnostic maps (Normal, AO, Curvature, Mask, etc.) using Cycles.</li>
+<li><strong>Image Mode</strong>: Preview baked texture maps directly on the model to verify quality before export.</li>
+</ul>
+<p>👉 <a href="subpanel_bevels/#viewport-display-engine"><strong>Deep dive into Viewport Display</strong></a></p>
+<h3 id="3-advanced-baking-pipeline">3. Advanced Baking Pipeline</h3>
+<p>A streamlined environment for generating Normal, AO, Curvature, and ID maps.</p>
+<ul>
+<li><strong>Object Monitor</strong>: Intelligent pre-bake checklist and error logging (detects missing UVs, flipped islands, and overlaps).</li>
+<li><strong>Naming Templates</strong>: Automation of file naming using dynamic tokens like <code>%OBJECT%</code> and <code>%SUFFIX%</code>.</li>
+<li><strong>Sampling Presets</strong>: Quick toggles between Low, Medium, and High quality profiles for baking.</li>
+</ul>
+<p>👉 <a href="subpanel_bake/"><strong>Bake Panel Guide</strong></a> | <a href="manual_normal_map_baking/"><strong>Manual Baking Tutorial</strong></a></p>
+<h3 id="4-workflow-utilities-tools">4. Workflow Utilities (Tools)</h3>
+<ul>
+<li><strong>Live Boolean Integration</strong>: Automatically assigns a default bevel radius to new intersection edges created by non-destructive Boolean modifiers. <a href="live_boolean/"><strong>Read more</strong></a>.</li>
+<li><strong>Normal Map Tools</strong>: Includes the <strong>Explode System</strong> for artifact-free baking, <strong>Weighted Normal</strong> injection, and the <strong>Normal Mixer</strong> for blending procedural bevels with micro-textures.</li>
+<li><strong>Vertex Color Mask</strong>: Encodes bevel parameters into Vertex Color attributes for export to external suites like <strong>Marmoset Toolbag</strong>.</li>
+</ul>
+<p>👉 <a href="subpanel_tools/"><strong>Tools Overview</strong></a> | <a href="marmoset-integration/"><strong>Marmoset Toolbag Integration</strong></a></p>
+<h3 id="5-zen-multi-panel-ui">5. Zen Multi-Panel UI</h3>
+<p>Featuring a modular interface where you can customize your workspace by pinning subpanels and rearranging their order.</p>
+<p>👉 <a href="main_panel/"><strong>Main Panel Overview</strong></a> | <a href="piemenu/"><strong>Pie Menu Guide (Ctrl+Shift+X)</strong></a></p>
+<hr />
+<h2 id="quick-navigation">Quick Navigation</h2>
+<ol>
+<li><a href="installation/"><strong>Installation</strong></a> — How to install and activate the addon.</li>
+<li><a href="quickstart/"><strong>Quick Start</strong></a> — Essential steps: assigning, previewing, and baking.</li>
+<li><a href="subpanel_preferences/"><strong>Preferences</strong></a> — Customizing hotkeys, UI styles, and default behaviors.</li>
+<li><a href="troubleshooting/"><strong>Troubleshooting</strong></a> — Common questions and solutions.</li>
+</ol>
+<p><strong>Zen BBQ — Build Bevels Quickly!</strong></p>
+<p><img alt="Example" src="img/promo-images/vertex-example.gif" /></p>
+<hr />
+<p><a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><img alt="Gumroad" src="img/icons/services/gumroad-16.png" /> <strong>Gumroad</strong></a> | <a href="https://blendermarket.com/products/zen-bbq"><img alt="Superhive" src="img/icons/services/superhive-16.png" /> <strong>Superhive</strong></a> | <a href="https://discord.gg/wGpFeME"><img alt="Discord" src="img/icons/services/discord-16.png" /> <strong>Discord</strong></a></p>
               
             </div>
           </div><footer>
@@ -215,5 +260,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-09-02 19:50:23.717349+00:00
+Build Date UTC : 2026-07-20 08:01:44.256079+00:00
 -->

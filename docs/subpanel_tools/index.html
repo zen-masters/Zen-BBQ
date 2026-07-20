@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tools - Zen BBQ 2.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tools";
+        var mkdocs_page_input_path = "subpanel_tools.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen BBQ 2.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Features</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../main_panel/">Main Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bevels/">Bevels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bake/">Bake</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Tools</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#live-boolean">Live Boolean</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#normal-preview-studio">Normal Preview Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#normal-map-tools">Normal Map Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bbq-explode-system">BBQ Explode System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-normals-mixer">Add Normals Mixer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#node-inout-specifications">Node In/Out Specifications:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vertex-color-mask">Vertex Color Mask</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-vc-mask">Create VC Mask</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-max-bevel-by-material">Show Max Bevel by Material</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#node-vc-mask">Node VC Mask</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mesh-tools">Mesh Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bevel-modifier">Bevel Modifier</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-hard-edges">Select Hard Edges</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#misc-tools">Misc Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#remap-zenbbq-weights">Remap ZenBBQ Weights</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generate-bbq-material-id">Generate BBQ Material ID</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_help/">Help</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../live_boolean/">Live Boolean</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../manual_normal_map_baking/">Manual Normal Map Baking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../marmoset-integration/">Marmoset Toolbag Integration</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Changelog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_2.0.0/">Version 2.0.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.2.0/">Version 1.2.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.1.0/">Version 1.1.0</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen BBQ 2.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core Features</li>
+      <li class="breadcrumb-item active">Tools</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tools-panel">Tools Panel</h1>
+<p>The <strong>Tools Panel</strong> contains essential utilities designed to streamline your mesh preparation, non-destructive workflows, and diagnostic visualization prior to baking.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Tools Panel" src="../img/bbq-screens/npanel/tools-subpanel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Tools Panel.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="live-boolean">Live Boolean</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Live Boolean Subpanel" src="../img/bbq-screens/npanel/live-boolean-radius-operator-panel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 2. Live Boolean operator.</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Live Boolean operator properties" src="../img/bbq-screens/npanel/set-default-radius-op-prop.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 3. Live Boolean operator properties invoke dialog.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Set Default Radius:</strong> Specifies the fallback bevel radius that will automatically be assigned to any newly generated intersection edges created by Blender&rsquo;s non-destructive Boolean modifiers. This ensures that your procedural bevels remain seamless and present on newly cut geometry without manual reassignment.</li>
+</ul>
+<hr />
+<h2 id="normal-preview-studio">Normal Preview Studio</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Normal Preview Studio" src="../img/bbq-screens/npanel/normal-preview-studio-panel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 4. Setup Studio panel.</em></td>
+</tr>
+</tbody>
+</table>
+<p>This utility creates a classic three-point lighting rig paired with a camera and a target Empty to help you inspect shading, normal orientation, and procedural bevels under optimal lighting conditions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Setup Studio Dialog" src="../img/bbq-screens/npanel/setup-studio-op-prop.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 5. Setup Studio invoke dialog options.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Setup Studio:</strong> Opens an invoke dialog layout to customize the preview behavior:<ul>
+<li><strong>Activate Scene Lights:</strong> Toggles Blender&rsquo;s viewport shading to use scene lights during <em>Material Preview</em> or <em>Render</em> modes.</li>
+<li><strong>Disable Scene World:</strong> Option to isolate your lighting environment by blocking default world backgrounds.</li>
+<li><strong>Distance Scalar:</strong> Scales the proportional distance of the lights relative to the asset.</li>
+</ul>
+</li>
+<li><strong>Remove Studio:</strong> Cleanly strips the generated lights, camera, and empty from the scene.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Important Note:</strong> At least one object must be selected before clicking <strong>Setup Studio</strong>, as the lighting rig is automatically target-constrained and oriented toward the selected asset.</p>
+<p>💡 <strong>Troubleshooting:</strong> If the lights do not appear in the viewport after initialization, please check Blender&rsquo;s global <strong>Selectability and Visibility</strong> overlays. If Light objects are hidden there, Blender will not render them in the viewport—Zen BBQ does not forcefully override these global visibility toggles.</p>
+</blockquote>
+<hr />
+<h2 id="normal-map-tools">Normal Map Tools</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Normal Maps tools panel" src="../img/bbq-screens/npanel/normal-maps-tools-panel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 6. Normal Maps tools panel.</em></td>
+</tr>
+</tbody>
+</table>
+<p>A suite of utilities designed to fine-tune surface normals and prevent projection artifacts.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="BBQ Weighted Normal Modifier" src="../img/bbq-screens/npanel/weighted-normal-modifier.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 7. Automatically configured bbq Weighted Normal modifier.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Set Weighted Normal:</strong> A convenience operator that instantly injects a custom-configured <code>Weighted Normal</code> modifier (<code>bbq Weighted Normal</code>) into your object&rsquo;s modifier stack. It sets the Weighting Mode to <em>Face Area &amp; Angle</em> and enables <em>Keep Sharp</em> to keep shading flat and clean on large surfaces.</li>
+</ul>
+<h4 id="bbq-explode-system">BBQ Explode System</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Exploded object example" src="../img/bbq-screens/npanel/exploded-object.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 8. Exploded object example.</em></td>
+</tr>
+</tbody>
+</table>
+<p>Baking ambient occlusion or utilizing procedural bevel shaders on multi-part meshes can cause unwanted bleeding or projection artifacts where separate parts touch or intersect. The <strong>Explode Modifier</strong> handles this procedurally.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="BBQ Explode System Modifier" src="../img/bbq-screens/npanel/tools-explode-system.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 9. BBQ Explode System settings in the modifier stack.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Add Explode:</strong> Applies a procedural displacement setup to your object.<ul>
+<li><strong>Explosion Center:</strong> By default, the object assigns itself as the center. For advanced control, <strong>it is highly recommended to replace this with an Empty</strong> or another external object. This allows you to easily move, rotate, or scale the Empty to direct how the mesh pieces separate in 3D space.</li>
+<li><strong>Vertex Group:</strong> If specified, only geometry within the designated group will disperse. If left blank, the system automatically explodes the asset based on contiguous <strong>mesh parts (Loose Parts)</strong>.</li>
+</ul>
+</li>
+<li><strong>Enable / Disable / Remove Explode:</strong> Quick management toggles to control or completely purge the explode modifier state.</li>
+</ul>
+<h4 id="add-normals-mixer">Add Normals Mixer</h4>
+<p>The <strong>Normals Mixer</strong> allows you to combine procedural bevels with custom surface details (such as micro-texture details, noise, or baked structural normal maps simulating metal surfaces).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="ZenBBQ_NormalsMixer Node Group" src="../img/bbq-screens/npanel/tools-normals-mixer-node.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 10. Custom ZenBBQ_NormalsMixer node group structure.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>All Materials / Active Material:</strong> Instantly injects the custom <code>ZenBBQ_NormalsMixer</code> node group into either all materials of the selected mesh or only the active one.</li>
+<li><strong>Repair Mixer Nodes (Wrench icon):</strong> A dedicated restoration operator. Because advanced users often customize the internal node structures inside the mixer group to achieve unique shading results, the addon avoids fully automating node repair. This standalone button ensures users can manually fix broken links or re-initialize default configurations without losing their internal node adjustments inadvertently.</li>
+</ul>
+<h5 id="node-inout-specifications">Node In/Out Specifications:</h5>
+<ul>
+<li><strong>Inputs:</strong><ul>
+<li><strong>Normal:</strong> Receives external surface normal inputs (e.g., secondary details or textures).</li>
+<li><strong>Factor:</strong> Controls the blending blend state across the mesh surface.</li>
+</ul>
+</li>
+<li><strong>Outputs:</strong><ul>
+<li><strong>Bevels:</strong> Outputs perfectly clean, procedural bevel normals.</li>
+<li><strong>Mixed:</strong> Outputs a blended combination of the procedural bevels and the incoming data fed into the <em>Normal</em> input slot (driven by the <em>Factor</em> value).</li>
+<li><strong>Mask:</strong> Generates a black-and-white isolation mask mapped specifically to the calculated bevel areas for further material customization.</li>
+</ul>
+</li>
+</ul>
+<h2 id="vertex-color-mask">Vertex Color Mask</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Vertex Color Mask" src="../img/bbq-screens/npanel/tools-vertex-color-mask-panel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 11. Vertex Color Mask tools panel.</em></td>
+</tr>
+</tbody>
+</table>
+<p>This suite of tools converts bevel radius parameters into Vertex Color attributes. This is essential for exporting procedural bevel data to external baking or rendering suites—most notably <strong>Marmoset Toolbag</strong>, which can interpret these vertex data channels to render identical procedural edges externally. For a detailed step-by-step workflow, check out our <a href="../marmoset-integration/">Marmoset Toolbag Integration Guide</a>.</p>
+<hr />
+<h3 id="create-vc-mask">Create VC Mask</h3>
+<p>This operator bakes bevel width values directly into the static vertex colors of the selected mesh.</p>
+<blockquote>
+<p>⚠️ <strong>Modifier Stack Limitation:</strong> Since this is a standard operator that generates static vertex color data, <strong>it evaluates the base geometry only and does not account for active object modifiers</strong>. Consequently, it cannot process non-destructive <strong>Live Booleans</strong>. To bake accurate vertex colors using this method, your modifier stack must be applied permanently. If you need to retain your live modifier stack, use the <strong>Node VC Mask</strong> alternative instead.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Create VC Mask Dialog" src="../img/bbq-screens/npanel/tools-create-vc-mask-dialog.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 12. Create VC Mask operator property options.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Layer Initialization (<code>G_ZenBBQ_VC_Mask</code>):</strong> By default, the operator automatically initializes a new color layer named with a <code>G_</code> prefix (indicating <em>Generated</em> data). This new layer is created with standard properties: <strong>Domain: Face Corner</strong>, <strong>Data Type: Color</strong>.</li>
+<li><strong>Use Active VC Layer:</strong> If you require a different domain/type layout or want to merge the generated mask into an existing vertex color set, make your target layer active in Blender and check this option.</li>
+<li><strong>Color Channel (Red / Green / Blue / Alpha / Combinations):</strong> Directs the data into specific color channels according to the specifications of your destination software.<ul>
+<li><em>Tip:</em> If you are unsure about channel layouts or are not using vertex colors to transmit other data types, selecting the final multi-channel profile (<strong>Red, Green, Blue, Alpha</strong>) is highly recommended. This prevents channel-bleeding export errors at the expense of a slightly larger file size.</li>
+</ul>
+</li>
+<li><strong>Add to Existing:</strong> When enabled, the operator overwrites <em>only</em> the specific channel assigned in the <em>Color Channel</em> field, protecting data sitting on the remaining channels from being wiped. <em>Note: Data within the active target channel is fully replaced, not blended.</em></li>
+</ul>
+<hr />
+<h3 id="show-max-bevel-by-material">Show Max Bevel by Material</h3>
+<p>Because vertex color channels operate strictly within a normalized float range of <code>0.0</code> to <code>1.0</code>, absolute real-world bevel values (e.g., 0mm to 8mm) must be mathematically remapped into this 0-1 scale. This operator scans your mesh to find the maximum bevel width present.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Show Max Bevel Dialog" src="../img/bbq-screens/npanel/tools-show-max-bevel-dialog.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 13. Show Max Bevel by Material configuration dialog.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Use All Materials:</strong> Expands the evaluation scan across every material assigned to the asset. If unchecked, it will analyze only the active material slot.</li>
+<li><strong>Units:</strong> Select your preferred metric readout (e.g., Millimeters, Centimeters).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Bevel Info Log Output" src="../img/bbq-screens/npanel/tools-bevel-info-output.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 14. Diagnostic pop-up window output log.</em></td>
+</tr>
+</tbody>
+</table>
+<p>The resulting pop-up displays the measurement units, material names, and the exact minimum and maximum bevel ranges found (e.g., <code>Material.001: min bevel = 0.0000 max bevel = 8.0000</code>). Use this exact maximum value to accurately calibrate remapping scales or shader attributes in your destination shading application.</p>
+<hr />
+<h3 id="node-vc-mask">Node VC Mask</h3>
+<p>This operator provides a <strong>fully dynamic alternative</strong> by applying a customized Geometry Nodes modifier to the selected object.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Node VC Mask Viewport Preview" src="../img/bbq-screens/npanel/bevel_to_vc_example.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 15. Dynamic node-based vertex color overlay previewed in the viewport.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Dynamic Modifiers &amp; Live Booleans:</strong> Unlike the static baking tool, this dynamic system updates automatically when you alter underlying geometry or change bevel presets. Most importantly, <strong>it fully supports Live Boolean operations</strong> and respects the <em>Live Boolean default radius</em> set in your preferences.<ul>
+<li><em>Best Practice:</em> To ensure all procedural cuts and intersections are tracked properly, ensure the generated modifier is placed <strong>at the very bottom of your modifier stack</strong>.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="ZenBBQ_BevelsToVertexColor Modifier Panel" src="../img/bbq-screens/npanel/bevel_to_vc_modifier.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 16. ZenBBQ_BevelsToVertexColor modifier configuration settings.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Layer Initialization (<code>N_ZenBBQ_VC_Mask</code>):</strong> Automatically initializes a dynamic node evaluation layer prefixed with <code>N_</code> (indicating <em>Nodes</em> data). <ul>
+<li><em>Note:</em> If you intend to copy this modifier manually across objects or chain it into your own custom node setups, you must create an attribute layer named <code>N_ZenBBQ_VC_Mask</code> manually on those target meshes.</li>
+</ul>
+</li>
+<li><strong>Channel Toggles (R / G / B):</strong> Isolates live mask generation to selected color channels directly from the modifier panel. You can select more than one channel simultaneously.</li>
+<li><strong>Alpha Channel Limitation:</strong> Due to core limitations within Blender&rsquo;s Geometry Nodes engine, processing the Alpha channel attribute dynamically is currently impossible. If your external pipeline strictly requires data inside the Alpha channel, you must use the static <strong>Create VC Mask</strong> operator instead.</li>
+<li><strong>Default Radius Field:</strong> This field inside the modifier UI is read-only and serves purely as an informational reference displaying the live preference-driven fallback radius.</li>
+</ul>
+<h2 id="mesh-tools">Mesh Tools</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Mesh Tools" src="../img/bbq-screens/npanel/tools-mesh-tools-panel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 17. Mesh Tools panel.</em></td>
+</tr>
+</tbody>
+</table>
+<p>A collection of geometric utilities designed to bridge Zen BBQ data with Blender&rsquo;s native modeling stack and selection tools.</p>
+<h3 id="bevel-modifier">Bevel Modifier</h3>
+<ul>
+<li><strong>Add Bevels:</strong> Automatically adds a pre-configured <code>BBQ Mesh Bevels</code> modifier to your stack. </li>
+<li><strong>Enable / Disable / Remove Bevels:</strong> Quick global switches to toggle or clear the modifier&rsquo;s influence.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="BBQ Mesh Bevels Modifier Setup" src="../img/bbq-screens/npanel/tools-mesh-bevels-modifier.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 18. BBQ Mesh Bevels modifier driving edge widths via custom attributes.</em></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>The Evolution of Bevel Attributes (Vertices vs Edges):</strong>
+* <strong>Historically (Pre-Zen BBQ 2.0):</strong> The addon exclusively saved bevel data into <strong>Vertex Attributes</strong>. This architecture allows for non-uniform, variable-width bevels along a single continuous edge. For instance, increasing the weight on a specific corner vertex within a recess lets you simulate organic casting defects, metal wear, or varying thickness—a powerful artistic feature for realistic hard-surface modeling.
+* <strong>Zen BBQ 2.0+ Update:</strong> The addon now stores bevel values inside <strong>Edge Attributes</strong> as well. This enables Blender&rsquo;s native Bevel modifier to dynamically read custom edge data fields (such as <code>ZenBBQ_EdgeBevelWidth</code>) and scale widths accurately directly across geometric selections.</p>
+</blockquote>
+<h3 id="select-hard-edges">Select Hard Edges</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Select Hard Edges Operator Options" src="../img/bbq-screens/npanel/tools-mesh-select-hard-edges-operator.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 19. Select Hard Edges operator properties.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Select Hard Edges:</strong> Evaluates the mesh geometry and instantly selects sharp or hard edges to streamline hard-surface analysis and workflow preparation.<ul>
+<li><strong>Angle Limit:</strong> Specifies the minimum geometric angle threshold (e.g., 30°) used to define which edges are considered sharp.</li>
+<li><strong>Include Open Edges:</strong> When enabled, automatically includes boundary and non-manifold open mesh edges into the final selection.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="misc-tools">Misc Tools</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Misc Tools" src="../img/bbq-screens/npanel/tools-misc-tools-panel.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 20. Misc Tools panel.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="remap-zenbbq-weights">Remap ZenBBQ Weights</h3>
+<p>Legacy versions of Blender could not read custom attributes within the Bevel modifier, meaning edge/vertex weights were strictly capped inside a fixed <code>0.0</code> to <code>1.0</code> range. This utility serves as a backward-compatibility and data-transfer bridge.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Remap ZenBBQ Weights Options" src="../img/bbq-screens/npanel/tools-remap-weights.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 21. Mode options for remapping vertex and edge attributes.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Remap (0-1):</strong> Compresses and maps your absolute real-world bevel metrics into a normalized <code>0-1</code> weight value, ensuring compatibility with older Blender tools or external setups that rely strictly on legacy weight layers.</li>
+<li><strong>Copy Directly:</strong> Clones existing Zen BBQ custom attribute data directly into Blender&rsquo;s standard edge-weight layers without applying normalization changes.</li>
+</ul>
+<h3 id="generate-bbq-material-id">Generate BBQ Material ID</h3>
+<p>This operator provides quick local access to the Material ID assignment tool. It functions identically to the utility fully detailed in the <a href="../subpanel_bake/#4-material-id">Baking Material IDs</a> pipeline section, assigning unique distinct color profiles across material groups for seamless color ID generation.</p>
+<hr />
+<p><a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><img alt="Gumroad" src="../img/icons/services/gumroad-16.png" /> <strong>Gumroad</strong></a> | <a href="https://blendermarket.com/products/zen-bbq"><img alt="Superhive" src="../img/icons/services/superhive-16.png" /> <strong>Superhive</strong></a> | <a href="https://discord.gg/wGpFeME"><img alt="Discord" src="../img/icons/services/discord-16.png" /> <strong>Discord</strong></a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../subpanel_bake/" class="btn btn-neutral float-left" title="Bake"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../subpanel_preferences/" class="btn btn-neutral float-right" title="Preferences">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../subpanel_bake/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../subpanel_preferences/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

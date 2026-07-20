@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Installation - Zen BBQ 1.2 for Blender</title>
+    <title>Installation - Zen BBQ 2.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -30,7 +31,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen BBQ 1.2 for Blender
+          <a href=".." class="icon icon-home"> Zen BBQ 2.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -46,6 +47,12 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#method-1-drag-and-drop-recommended">Method 1: Drag and Drop (Recommended)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-2-install-from-disk-via-preferences">Method 2: Install from Disk (Via Preferences)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#technical-requirements-verification">Technical Requirements &amp; Verification</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -53,25 +60,39 @@
                 <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Core Features</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../npanel/">N-Panel</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_panel/">Main Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bevels/">Bevels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bake/">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_help/">Help</a>
+                  </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../live_boolean/">Live Boolean</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../bake-tutor-1/">How to Bake Normal Map</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../guide_using_vc_mask/">How to use vertex color mask</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manual_normal_map_baking/">Manual Normal Map Baking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../marmoset-integration/">Marmoset Toolbag Integration</a>
+                  </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
@@ -80,6 +101,8 @@
               <p class="caption"><span class="caption-text">Changelog</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_2.0.0/">Version 2.0.0</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.2.0/">Version 1.2.0</a>
                   </li>
@@ -93,7 +116,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen BBQ 1.2 for Blender</a>
+          <a href="..">Zen BBQ 2.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -110,13 +133,47 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="zen-bbq-installation">Zen BBQ Installation</h1>
+<p>There are two easy methods to install <strong>ZenBBQ</strong> archive directly into Blender.</p>
+<hr />
+<h2 id="method-1-drag-and-drop-recommended">Method 1: Drag and Drop (Recommended)</h2>
+<p>The fastest and most intuitive way to install the local extension:</p>
+<ol>
+<li>Open <strong>Blender</strong>.</li>
+<li>Open your operating system&rsquo;s file manager and locate the downloaded <strong><code>ZenBBQ_2_0.zip</code></strong> file.</li>
+<li>Simply <strong>drag the <code>.zip</code> file</strong> and <strong>drop it directly into the Blender 3D Viewport</strong>.</li>
+<li>Confirm the action by clicking <strong>Install</strong> in the popup prompt.</li>
+</ol>
+<hr />
+<h2 id="method-2-install-from-disk-via-preferences">Method 2: Install from Disk (Via Preferences)</h2>
+<p>If you prefer using Blender&rsquo;s standard menus:</p>
+<ol>
+<li>Go to the top menu and open <strong>Edit &mdash; Preferences</strong>.</li>
+<li>Navigate to the <strong>Get Extensions</strong> tab on the left.</li>
+<li>Click the <strong>arrow icon</strong> ▾ (dropdown menu) located in the top-right corner of the Extensions window.</li>
+<li>Select <strong>Install from Disk&hellip;</strong> from the dropdown list.</li>
+<li>In the file browser, locate and select your downloaded <strong><code>ZenBBQ_2_0.zip</code></strong> file.</li>
+<li>Verify that the <strong>Zen BBQ</strong> checkbox is checked (enabled) in your extensions list.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Installation" src="../img/bbq-screens/installation/installation.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">*Fig. 1. Blender Preferences panel.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="technical-requirements-verification">Technical Requirements &amp; Verification</h2>
 <ul>
-<li>Open <strong>Preferences &mdash; Add-ons</strong> window in Blender.</li>
-<li>Click <strong>Install</strong> button and choose zip-archive with the add-on.</li>
-<li>Make sure that its checkbox is enabled in Blender&rsquo;s add-on list.</li>
+<li><strong>Blender Version:</strong> Because Zen BBQ 2.0+ relies on the local extension architecture, it requires <strong>Blender 4.2 LTS</strong> or newer. For legacy versions of Blender, please use the legacy Zen BBQ 1.x addon format.</li>
+<li><strong>Accessing the UI:</strong> Once successfully installed and activated, Zen BBQ will appear in the <strong>N-Panel</strong> (sidebar) of your 3D Viewport under the <strong>Zen BBQ</strong> tab. Alternatively, you can summon the <strong>Pie Menu</strong> using the global hotkey: <code>Ctrl + Shift + X</code>.</li>
 </ul>
-<p><img alt="Installation" src="../img/bbq-screens/installation/installation.png" /></p>
-<!-- Also, you can [**watch the video**](https://youtu.be/dqpgWcRBE4o?t=17) how to install it. -->
+<hr />
+<p><a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><img alt="Gumroad" src="../img/icons/services/gumroad-16.png" /> <strong>Gumroad</strong></a> | <a href="https://blendermarket.com/products/zen-bbq"><img alt="Superhive" src="../img/icons/services/superhive-16.png" /> <strong>Superhive</strong></a> | <a href="https://discord.gg/wGpFeME"><img alt="Discord" src="../img/icons/services/discord-16.png" /> <strong>Discord</strong></a></p>
               
             </div>
           </div><footer>

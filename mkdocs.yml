@@ -20,6 +20,7 @@ nav:
     - Troubleshooting: troubleshooting.md
     - Changelog:
         - Changelog: changelog.md
+        - Version 2.0.0: changelog/release_note_2.0.0.md
         - Version 1.2.0: changelog/release_note_1.2.0.md
         - Version 1.1.0: changelog/release_note_1.1.0.md
 docs_dir: mkdocs

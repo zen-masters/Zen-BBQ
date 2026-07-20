@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Bevels - Zen BBQ 2.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Bevels";
+        var mkdocs_page_input_path = "subpanel_bevels.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen BBQ 2.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Features</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../main_panel/">Main Panel</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Bevels</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#bevel-presets-list">Bevel Presets List</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#advanced-operators">Advanced Operators</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#color-tag">Color Tag</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#activating-the-overlay">Activating the Overlay</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#preset-group-selection">Preset Group Selection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tools-block">Tools Block</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewport-display-engine">Viewport Display Engine</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#core-logic-how-it-works">Core Logic &amp; How It Works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#display-modes">Display Modes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-material-mode">1. Material Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-shader-mode">2. Shader Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-image-mode">3. Image Mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shading-type-shading-lock-settings">Shading Type &amp; Shading Lock Settings</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#the-lock-icon-shading-lock">The Lock Icon (Shading Lock)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ui-color-coding-and-material-assignments">UI Color Coding and Material Assignments</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#advanced-shader-setting-shader-bevels-preview">Advanced Shader Setting: Shader Bevels Preview</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#shader-render-presets">Shader Render Presets</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#quick-quality-toggles">Quick Quality Toggles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#preset-properties-blender-integration">Preset Properties &amp; Blender Integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#auxiliary-viewport-controls">Auxiliary Viewport Controls</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bake/">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_help/">Help</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../live_boolean/">Live Boolean</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../manual_normal_map_baking/">Manual Normal Map Baking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../marmoset-integration/">Marmoset Toolbag Integration</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Changelog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_2.0.0/">Version 2.0.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.2.0/">Version 1.2.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.1.0/">Version 1.1.0</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen BBQ 2.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core Features</li>
+      <li class="breadcrumb-item active">Bevels</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="bevels">Bevels</h1>
+<p>The <strong>Bevels</strong> subpanel features a dedicated preset list for selecting and assigning bevel sizes, management for preset groups, and a toggle to control how your objects are visualized in the Blender viewport.</p>
+<hr />
+<h2 id="bevel-presets-list">Bevel Presets List</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Main Panel Presets List" src="../img/bbq-screens/npanel/main-presets-list.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Main Panel Presets List</em></td>
+</tr>
+</tbody>
+</table>
+<p>This list contains your custom bevel size presets. Each row represents an individual preset and includes the following elements:</p>
+<ul>
+<li><strong>Color Tag:</strong> Used for visual identification of the bevel size in the viewport and within the <a href="../piemenu/">Zen BBQ Pie Menu</a>.</li>
+<li><strong>Size Value:</strong> The numerical radius of the bevel.</li>
+<li><strong>Unit Dropdown:</strong> Displays and controls the unit of measurement for the bevel.</li>
+<li><strong>Assign Operator:</strong> A direct button to apply the specific bevel size to the selected mesh elements. Having this operator available for each row allows you to assign a bevel instantly with a single click, without needing to select the list item first.</li>
+</ul>
+<p>To the right of the list, you will find list management buttons and auxiliary operators:</p>
+<ul>
+<li><strong>Smart Select:</strong> Selects geometry (vertices/edges) that shares the same Bevel Value as the currently selected elements, using a specified threshold. <em>Requires the object to be in Edit Mode with at least one mesh element selected.</em></li>
+<li><strong>Select by Selected Preset:</strong> Selects all geometry in the mesh that matches the Bevel Value of the active preset in the list.</li>
+<li><strong>Add Entry (+):</strong> Adds a new bevel preset to the list.</li>
+<li><strong>Remove Entry (-):</strong> Removes the active bevel preset from the list.</li>
+</ul>
+<h3 id="advanced-operators">Advanced Operators</h3>
+<p>The drop-down arrow button contains advanced operators that are used less frequently:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Advanced Operators" src="../img/bbq-screens/npanel/additional_presets_ops.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 2. Advanced Operators</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Create Presets:</strong> Generates a standard set of 6 bevel values tailored to your current scene units. This is an excellent starting point when setting up a new project from scratch.</li>
+<li><strong>Replace Radius Value:</strong> Replaces an existing radius value across the entire mesh with a newly specified one.</li>
+<li><strong>Clear Extra Values:</strong> Purges all custom bevel values from the mesh geometry that are no longer present in your active preset list.</li>
+<li><strong>Update:</strong> Refreshes and recalculates the Zen BBQ bevel data.</li>
+<li><strong>Display Preset Statistics:</strong> Toggles statistical data. Once enabled, a counter will appear next to each preset row, showing the exact number of vertices/edges where this specific bevel value is applied.</li>
+<li><strong>Set Live Boolean Default Bevel:</strong> Changes the default live boolean bevel radius for the selected objects. For a deep dive into this workflow, see the <a href="../live_boolean/">Live Boolean</a> guide.</li>
+</ul>
+<p>Please see the <a href="../quickstart/#managing-presets"><strong>Quick Start Guide</strong></a> for step-by-step instructions.</p>
+<h3 id="color-tag">Color Tag</h3>
+<p>Each preset features a dedicated <strong>Color Tag</strong> used to visually identify specific bevel radiuses in the viewport. These six presets are also automatically mapped to the <a href="../piemenu/">Pie Menu</a> in a clockwise direction.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Pie Menu Correspondence" src="../img/bbq-screens/npanel/preset-list-piemenu-correspondence.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 3. Pie menu correspondence.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="activating-the-overlay">Activating the Overlay</h4>
+<p>To visualize these color tags on your geometry, you need to enable the overlay mode using the dedicated control button:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Highlight Bevels Toggle Button" src="../img/bbq-screens/npanel/highlight-bevels-toggle.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 4. Highlight Bevels Toggle operator location.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Highlight Bevels Toggle (Intersecting Circles icon):</strong> Located inside the <strong>Tools Block</strong>, directly above the preset list (first icon in the row next to the Update button). Toggling this on activates the real-time viewport overlay, color-coding edges based on their assigned bevel radius.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Color Tag Example" src="../img/bbq-screens/npanel/color_tag_example.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 5. Color Tag implementation in the viewport and preset list.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="preset-group-selection">Preset Group Selection</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Main Panel Preset Group Selection" src="../img/bbq-screens/npanel/main-preset-group-selection.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 6. Main panel preset group selection</em></td>
+</tr>
+</tbody>
+</table>
+<p>This section utilizes Blender&rsquo;s native preset system to create, save, and manage custom groups of your bevel size lists.</p>
+<p>From left to right:</p>
+<ul>
+<li><strong>Preset Dropdown:</strong> Displays the active preset group name and lets you switch between saved groups.</li>
+<li><strong>Add Button (+):</strong> Saves the current state of your bevel size list as a new preset group.</li>
+<li><strong>Remove Button (-):</strong> Deletes the currently selected preset group from the list.</li>
+</ul>
+<p>Please see the <a href="../quickstart/#managing-presets"><strong>Quick Start Guide</strong></a> for step-by-step instructions.</p>
+<hr />
+<h2 id="tools-block">Tools Block</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Main Panel Tools Block" src="../img/bbq-screens/npanel/main-tools-block.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 7. Main panel tools block</em></td>
+</tr>
+</tbody>
+</table>
+<p>From left to right:</p>
+<ul>
+<li><strong>Highlight Bevels Toggle:</strong> Toggles the color-coded bevel visualization for objects in Edit Mode on or off. While it doesn&rsquo;t display the physical size, it allows you to easily identify specific bevel sizes by their corresponding <a href="#color-tag">Color Tags</a> defined in the presets list.</li>
+<li><strong>Update:</strong> Refreshes the Zen BBQ bevel data. This synchronizes the state of the active preset list with the actual data stored inside the scene objects. It is highly recommended to run this update when opening a project file received from a colleague.</li>
+<li><strong>Set Zero Radius to Selection:</strong> Applies a zero-bevel radius to the selected geometry. This operator works in both <strong>Object Mode</strong> and <strong>Edit Mode</strong>, so exercise caution to avoid accidentally wiping your bevels. As a safeguard, this operator triggers a confirmation popup before executing.</li>
+</ul>
+<hr />
+<h2 id="viewport-display-engine">Viewport Display Engine</h2>
+<p>The Viewport Display Engine is a powerful toolset within Zen BBQ designed to manage how your objects and bevels are visualized in the Blender viewport. It allows you to quickly cycle through different preview modes to inspect your procedural bevels, baked maps, or original materials.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="The main Viewport Display switcher" src="../img/bbq-screens/npanel/main_viewport_display_switcher.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 8. The main Viewport Display switcher and its configuration subpanels.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="core-logic-how-it-works">Core Logic &amp; How It Works</h3>
+<p>The engine operates using <strong>three main display modes</strong> represented by a row of buttons (only one mode can be active at a time).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>To switch modes, <strong>at least one object must be selected</strong>. This requirement exists because Zen BBQ utilizes a non-destructive material overriding system. Instead of permanently altering your custom shader networks, the addon injects a specialized group of nodes directly before the <strong>Shader Output</strong> node of the selected object&rsquo;s material. </p>
+<p>This override group can be toggled automatically by switching modes, or cleared manually at any time.</p>
+<hr />
+<h3 id="display-modes">Display Modes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Display Mode Buttons" src="../img/bbq-screens/npanel/display_mode_buttons.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 9. Material, Shader, and Image display mode buttons with the active Map Type dropdown.</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Material, Shader, Image modes" src="../img/bbq-screens/npanel/material_shader_image_modes_comparision.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 10. Material (with active BBQ overlay), Shader, and Image display mode comparision from left to right.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-material-mode">1. Material Mode</h4>
+<p>This mode displays your original, unaltered user materials. It is designed for checking the final look of your asset without any diagnostic overlays.</p>
+<h4 id="2-shader-mode">2. Shader Mode</h4>
+<p>This mode activates the procedural shader override to visualize bevels and other procedural diagnostic maps directly on the object&rsquo;s surface. When active, you can select the specific map type from the dropdown menu below the buttons:</p>
+<ul>
+<li><strong>Normal:</strong> Displays the procedural bevels seamlessly integrated into a clean clay-like material (optimized to judge surface transitions, rather than showing a raw normal map texture).</li>
+<li><strong>AO</strong> (Ambient Occlusion)</li>
+<li><strong>Curvature</strong></li>
+<li><strong>Convexity</strong></li>
+<li><strong>Concavity</strong></li>
+<li><strong>Bevels Mask</strong></li>
+<li><strong>Parts ID</strong></li>
+<li><strong>Materials ID</strong></li>
+<li><strong>Object Space Normal Map</strong></li>
+</ul>
+<h4 id="3-image-mode">3. Image Mode</h4>
+<p>This mode is used to visualize <strong>baked texture maps</strong>. It features the exact same map type options as Shader Mode, but instead of calculating them procedurally in real-time, it reads the data directly from the baked image textures. This is ideal for verifying baking quality before exporting your asset.</p>
+<hr />
+<h3 id="shading-type-shading-lock-settings">Shading Type &amp; Shading Lock Settings</h3>
+<p>Directly above each mode button sits its corresponding configuration popover. Clicking it opens a subpanel where you can manage the Blender <strong>Shading Type</strong> (Rendered, Material, Solid, Wireframe, or Skip) and color settings.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Shading Type popup" src="../img/bbq-screens/npanel/shading_type_popup.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 11. Shading Type and Lock configuration popup for the Shader Mode.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-lock-icon-shading-lock">The Lock Icon (Shading Lock)</h4>
+<p>Each popover features a <strong>Lock</strong> toggle next to the Shading Type selection. When locked, it forces the Blender viewport into that specific shading mode and prevents accidental manual changes, preserving the core workflow.</p>
+<ul>
+<li>By default, the lock is <strong>enabled</strong> for both <strong>Shader</strong> and <strong>Image</strong> modes. This ensures that procedural bevels and baked maps remain visible, as they require specific viewport shading types to render correctly.</li>
+<li>Advanced users can unlock these settings or choose the <strong>Skip</strong> option, which completely bypasses viewport shading changes when switching modes.</li>
+</ul>
+<hr />
+<h3 id="ui-color-coding-and-material-assignments">UI Color Coding and Material Assignments</h3>
+<p>Zen BBQ uses a strict color-coded system to give you instant visual feedback on your current engine state:</p>
+<ul>
+<li><span style="color:#5C5668;">██</span> <strong>Eggplant Color (#5C5668FF):</strong> The default material color used for <strong>Shader Mode</strong>. It provides an optimized, neutral matte surface for inspecting real-time procedural bevels.</li>
+<li><span style="color:#585878;">██</span> <strong>Blue-Gray Color (#585878FF):</strong> The default <strong>Bake Preview Color</strong> used for <strong>Image Mode</strong>. It shares a similar tone to the Shader Mode for easy comparison, but leans slightly bluer to match the standard look of a Normal Map.</li>
+<li><span style="color:#4F6058;">██</span> <strong>Default Material Color (#4F6058FF):</strong> Because the engine relies on materials to preview bevels, Zen BBQ will automatically assign a temporary fallback material if your object doesn&rsquo;t have one. You can customize this fallback color in the <a href="../subpanel_preferences/#common-settings">Preferences -&gt; Common</a> panel.</li>
+</ul>
+<h4 id="advanced-shader-setting-shader-bevels-preview">Advanced Shader Setting: Shader Bevels Preview</h4>
+<p>Within the <strong>Shader</strong> popover, you will find the <strong>Shader Bevels Preview</strong> checkbox. </p>
+<ul>
+<li><strong>Checked (Default):</strong> Injects the standard override node group to preview bevels and procedural maps.</li>
+<li><strong>Unchecked:</strong> Disables the automatic override. This is an advanced workflow setting utilized when authoring custom normal manually with the <strong>Zen BBQ Normal Mixer</strong>, preventing the default diagnostic shader from interfering with your custom setup.</li>
+</ul>
+<hr />
+<h2 id="shader-render-presets">Shader Render Presets</h2>
+<p>Directly below the display mode buttons, you will find the <strong>Shader Render Presets</strong> subpanel. These settings control the viewport rendering quality for procedural previews. They drastically speed up performance in the viewport and <strong>do not affect the final baking quality</strong>, which utilizes a separate, dedicated configuration.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Shader Render Presets" src="../img/bbq-screens/npanel/preview_presets.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 12. Zen BBQ Render Presets linked directly with Blender&rsquo;s native Viewport settings.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="quick-quality-toggles">Quick Quality Toggles</h3>
+<p>To keep your workflow fluid, Zen BBQ comes with three out-of-the-box quality presets:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Quick quality toggles" src="../img/bbq-screens/npanel/quick-quality-toggles.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 13. Quick quality toggles section with Low, Med, and High preset profiles.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Low:</strong> Optimized for maximum viewport responsiveness during fast asset iteration.</li>
+<li><strong>Med:</strong> A balanced profile offering a clean preview with minimal performance impact.</li>
+<li><strong>High:</strong> Delivers maximum visual fidelity to inspect fine bevel intersections before baking.</li>
+</ul>
+<p>Advanced users can customize and save their own profiles using Blender&rsquo;s native preset system by clicking the <strong>Preset Management</strong> button (sliders icon) located on the right side of the subpanel header.</p>
+<h3 id="preset-properties-blender-integration">Preset Properties &amp; Blender Integration</h3>
+<p>As demonstrated in <em>Fig. 12</em>, the settings inside the <strong>Viewport</strong> and <strong>Denoise</strong> sections are bi-directionally synced with Blender&rsquo;s native <strong>Render Properties -&gt; Sampling -&gt; Viewport</strong> panel. Changing values inside Zen BBQ updates Blender instantly (and vice versa), giving you full transparency over what the addon is controlling.</p>
+<p>Key parameters managed by the presets include:</p>
+<ul>
+<li><strong>AO &amp; Bevel Node Samples:</strong> Specifically regulates the sample counts inside the procedural Cycles shader nodes to clean up noise on transitions.</li>
+<li><strong>Noise Threshold &amp; Max/Min Samples:</strong> Manages the core Cycles viewport render engine limits.</li>
+<li><strong>Denoise Settings:</strong> Toggles viewport denoising (<code>Automatic</code>, <code>OptiX</code>, etc.) and configures the start sample threshold to let you clean up complex preview shapes instantly.</li>
+</ul>
+<h3 id="auxiliary-viewport-controls">Auxiliary Viewport Controls</h3>
+<p>To the right of the display mode switcher buttons, there are additional quick-access diagnostic icons to help you manage lighting, image filtering, and shader health.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Auxiliary Viewport Controls Icons" src="../img/bbq-screens/npanel/auxiliary-controls.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 14. Scene World (Light bulb), Texture Interpolation (Grid), and Repair Preview Nodes (Wrench) quick toggles.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Scene World (Light Bulb icon):</strong> Toggles Blender&rsquo;s native <code>Use Scene World</code> shading property. </li>
+<li><strong>Why it matters:</strong> By default, Blender uses the active scene world shader for lighting the viewport. If your world environment is empty or dark, inspecting procedural bevels becomes incredibly difficult. Disabling this option forces the viewport to bypass the scene world and use Blender&rsquo;s internal default HDRI lighting instead, which immediately provides a clear, well-lit surface for accurate previewing.</li>
+<li><strong>Texture Interpolation (Pixelated Grid icon):</strong> Controls how the textures are scaled and filtered when viewing them in <strong>Image Mode</strong>.</li>
+<li><strong>Enabled (Linear):</strong> Uses standard linear filtering for a regular, smooth render interpolation quality.</li>
+<li><strong>Disabled (Closest):</strong> Disables interpolation entirely, displaying raw pixels based on the nearest pixel method (ideal for pixel-art styles and evaluating texture <strong>texel density</strong>).</li>
+<li><strong>Repair Preview Nodes (Wrench icon):</strong> Purges all cached preview nodes from the active materials and regenerates them from scratch. </li>
+<li><strong>Why it matters:</strong> This is a powerful maintenance tool used to resolve visual glitches or restore the underlying shader structure if Blender&rsquo;s node graph becomes desynced or corrupted during extensive manual material authoring.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using <strong>Repair Preview Nodes</strong> will completely delete and regenerate all custom nodes created by Zen BBQ. If you have manually edited or customized any of these underlying shader node networks, all your changes will be permanently lost. Use this operator with caution!</p>
+</div>
+<hr />
+<p><a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><img alt="Gumroad" src="../img/icons/services/gumroad-16.png" /> <strong>Gumroad</strong></a> | <a href="https://blendermarket.com/products/zen-bbq"><img alt="Superhive" src="../img/icons/services/superhive-16.png" /> <strong>Superhive</strong></a> | <a href="https://discord.gg/wGpFeME"><img alt="Discord" src="../img/icons/services/discord-16.png" /> <strong>Discord</strong></a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../main_panel/" class="btn btn-neutral float-left" title="Main Panel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../subpanel_bake/" class="btn btn-neutral float-right" title="Bake">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../main_panel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../subpanel_bake/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

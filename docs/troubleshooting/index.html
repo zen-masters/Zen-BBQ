@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Troubleshooting - Zen BBQ 1.2 for Blender</title>
+    <title>Troubleshooting - Zen BBQ 2.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -30,7 +31,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen BBQ 1.2 for Blender
+          <a href=".." class="icon icon-home"> Zen BBQ 2.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -51,30 +52,50 @@
                 <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Core Features</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../npanel/">N-Panel</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_panel/">Main Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bevels/">Bevels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_bake/">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subpanel_help/">Help</a>
+                  </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../piemenu/">Pie Menu</a>
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../live_boolean/">Live Boolean</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../bake-tutor-1/">How to Bake Normal Map</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../guide_using_vc_mask/">How to use vertex color mask</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manual_normal_map_baking/">Manual Normal Map Baking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../marmoset-integration/">Marmoset Toolbag Integration</a>
+                  </li>
               </ul>
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Troubleshooting</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#i-cant-find-zen-bbq-panel-in-the-n-panel">— I can&rsquo;t find Zen BBQ panel in the N-panel</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-zen-bbq-tab-is-missing-in-the-n-panel">1. Zen BBQ Tab is Missing in the N-Panel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-procedural-bevels-are-not-visible-in-the-viewport">2. Procedural Bevels are Not Visible in the Viewport</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-artifacts-or-bleeding-during-map-baking">3. Artifacts or Bleeding During Map Baking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-live-boolean-cuts-are-missing-bevels">4. Live Boolean Cuts are Missing Bevels</a>
     </li>
     </ul>
                 </li>
@@ -82,6 +103,8 @@
               <p class="caption"><span class="caption-text">Changelog</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_2.0.0/">Version 2.0.0</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../changelog/release_note_1.2.0/">Version 1.2.0</a>
                   </li>
@@ -95,7 +118,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen BBQ 1.2 for Blender</a>
+          <a href="..">Zen BBQ 2.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -111,19 +134,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="troubleshooting">Troubleshooting</h1>
-<h2 id="i-cant-find-zen-bbq-panel-in-the-n-panel">— I can&rsquo;t find Zen BBQ panel in the N-panel</h2>
-<p>— The Zen BBQ panel is only present in <strong>Edit</strong> or <strong>Object Modes</strong></p>
-<!-- blank line -->
+                <h1 id="troubleshooting-faq">Troubleshooting &amp; FAQ</h1>
+<p>This guide covers the most common questions and issues users encounter when using Zen BBQ.</p>
 <hr />
-<!-- blank line -->
+<h2 id="1-zen-bbq-tab-is-missing-in-the-n-panel">1. Zen BBQ Tab is Missing in the N-Panel</h2>
+<p>If you have installed the addon but cannot find the <strong>Zen BBQ</strong> tab in the sidebar (N-Panel):</p>
+<ul>
+<li><strong>Check Blender Version:</strong> Zen BBQ 2.0+ utilizes the local extension architecture and requires <strong>Blender 4.2 LTS or newer</strong>. It will not function on older versions.</li>
+<li><strong>Activation Check:</strong> Go to <code>Edit -&gt; Preferences -&gt; Get Extensions</code>. Search for &ldquo;Zen BBQ&rdquo; and ensure the checkbox is enabled.</li>
+<li><strong>Installation Method:</strong> Ensure you followed the correct <a href="../installation/">Installation Guide</a>. We recommend the &ldquo;Drag and Drop&rdquo; method for simplicity.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Note:</strong> If you are using an older version of Blender (e.g., 3.6 or 4.1), you must use the legacy Zen BBQ 1.x version instead.</p>
+</blockquote>
+<hr />
+<h2 id="2-procedural-bevels-are-not-visible-in-the-viewport">2. Procedural Bevels are Not Visible in the Viewport</h2>
+<p>If you have assigned bevels but don&rsquo;t see any rounded edges on your model:</p>
+<ul>
+<li><strong>Switch to Shader Mode:</strong> Zen BBQ uses a dedicated display engine. Ensure you have selected the <strong>Shader Mode</strong> button (the middle one in the display switcher) in the <strong>Bevels</strong> subpanel.</li>
+<li><strong>Render Engine:</strong> Procedural bevels rely on the <strong>Cycles Bevel Shader</strong>. Ensure your Render Engine is set to <strong>Cycles</strong>. Zen BBQ will typically prompt you to switch, but you can check this manually in the <code>Render Properties</code> tab.</li>
+<li><strong>Object Selection:</strong> Zen BBQ uses a non-destructive material override. You must have at least one object selected for the display mode switcher to work.</li>
+<li><strong>Shader Settings:</strong> Check if <strong>Shader Bevels Preview</strong> is enabled in the Shader popover configuration.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Note:</strong> You must use the dedicated <strong>Shader</strong> button to see procedural results and the <strong>Material</strong> button to return to your original shaders.</p>
+</blockquote>
+<hr />
+<h2 id="3-artifacts-or-bleeding-during-map-baking">3. Artifacts or Bleeding During Map Baking</h2>
+<p>If your baked Normal, AO, or Curvature maps show dark spots, bleeding, or projection artifacts where parts of the mesh intersect:</p>
+<ul>
+<li><strong>Use the Explode System:</strong> Multi-part meshes often cause projection issues during baking. Use the <strong>BBQ Explode System</strong> found in the <strong>Tools Panel</strong>.</li>
+<li><strong>How to fix:</strong><ol>
+<li>Select your object and navigate to the <strong>Tools</strong> subpanel.</li>
+<li>Click <strong>Add Explode</strong>. This will apply a procedural displacement to separate the mesh parts (Loose Parts) in 3D space.</li>
+<li>Perform your bake while the mesh is &ldquo;exploded&rdquo;.</li>
+<li>Disable or remove the Explode modifier after baking is complete.</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Note:</strong> For the best results with the Explode System, it is highly recommended to use an <strong>Empty</strong> as the <strong>Explosion Center</strong> to precisely control the direction of part separation.</p>
+</blockquote>
+<hr />
+<h2 id="4-live-boolean-cuts-are-missing-bevels">4. Live Boolean Cuts are Missing Bevels</h2>
+<p>If you are using a non-destructive Boolean workflow and the new cuts do not automatically receive a bevel:</p>
+<ul>
+<li><strong>Check Default Radius:</strong> Zen BBQ needs a fallback value for new edges. Go to the <strong>Tools</strong> subpanel and ensure a <strong>Default Radius</strong> is set.</li>
+<li><strong>Configuration:</strong> Click <strong>Set Default Radius</strong> and enter your desired value (e.g., 2mm). All subsequent boolean operations on the selected objects will now inherit this radius for their intersection edges.</li>
+<li><strong>Modifier Order:</strong> If you are using the <strong>Node VC Mask</strong> for export, ensure the modifier is at the very bottom of your stack to capture all dynamic boolean intersections.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Note:</strong> You can adjust the global fallback radius at any time, and all non-destructive boolean cuts on the object will update their bevel widths accordingly.</p>
+</blockquote>
 <p>If you have any question, please let us know:
 <img alt="Discord" src="../img/icons/services/discord-16.png" /> <a href="https://discord.gg/wGpFeME"><strong>Discord</strong></a></p>
+<hr />
+<p><a href="https://sergeytyapkin.gumroad.com/l/zenbbq"><img alt="Gumroad" src="../img/icons/services/gumroad-16.png" /> <strong>Gumroad</strong></a> | <a href="https://blendermarket.com/products/zen-bbq"><img alt="Superhive" src="../img/icons/services/superhive-16.png" /> <strong>Superhive</strong></a> | <a href="https://discord.gg/wGpFeME"><img alt="Discord" src="../img/icons/services/discord-16.png" /> <strong>Discord</strong></a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../guide_using_vc_mask/" class="btn btn-neutral float-left" title="How to use vertex color mask"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../marmoset-integration/" class="btn btn-neutral float-left" title="Marmoset Toolbag Integration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../changelog/" class="btn btn-neutral float-right" title="Changelog">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -147,7 +218,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../guide_using_vc_mask/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../marmoset-integration/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../changelog/" style="color: #fcfcfc">Next &raquo;</a></span>
